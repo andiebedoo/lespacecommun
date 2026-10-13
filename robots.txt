@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /paiement.html
+Disallow: /paiement-merci.html
+Disallow: /espace-gerante.html

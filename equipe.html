@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L&#x27;équipe — L&#x27;Espace Commun</title>
+  <meta name="description" content="Les psychologues du réseau L&#x27;Espace Commun : présentation, spécialités et prise de rendez-vous." />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Fraunces", ui-serif, Georgia, serif;
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-sage: var(--sage);
+      --color-sage-foreground: var(--sage-foreground);
+      --color-clay: var(--clay);
+      --color-ink: var(--ink);
+      --color-ink-foreground: var(--ink-foreground);
+      --color-canvas: var(--canvas);
+    }
+    :root {
+      --background: oklch(97.3% .005 95.1);
+      --foreground: oklch(21% .006 285.9);
+      --secondary: oklch(96.7% .001 286.4);
+      --secondary-foreground: oklch(33.5% .019 169.7);
+      --muted-foreground: oklch(55.2% .014 285.9);
+      --border: oklch(92% .004 286.3);
+      --input: oklch(92% .004 286.3);
+      --ring: oklch(33.5% .019 169.7);
+      --sage: oklch(33.5% .019 169.7);
+      --sage-foreground: oklch(97.3% .005 95.1);
+      --clay: oklch(73.2% .06 59.8);
+      --ink: oklch(28.3% .039 249.3);
+      --ink-foreground: oklch(97.3% .005 95.1);
+      --canvas: oklch(97.3% .005 95.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--background); color: var(--foreground); }
+    h1, h2, h3 { overflow-wrap: break-word; }
+    * { border-color: var(--border); }
+    .prose-ec p { margin-bottom: 1rem; line-height: 1.75; color: var(--muted-foreground); }
+    .prose-ec ul { margin: 0 0 1rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+    .prose-ec li { margin-bottom: .5rem; line-height: 1.7; }
+    .prose-ec li::marker { color: var(--clay); }
+    .prose-ec strong { color: var(--foreground); font-weight: 500; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<div class="min-h-screen bg-canvas font-sans text-foreground selection:bg-clay/20">
+
+  <div class="bg-ink px-6 py-3 text-ink-foreground">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
+      <p class="text-pretty text-sm font-medium">Une situation de crise ? Nos créneaux d'urgence sont disponibles sous 24h.</p>
+      <a href="rdv.html?motif=urgence" class="text-sm font-semibold underline decoration-ink-foreground/40 underline-offset-4 transition-colors hover:decoration-ink-foreground">Demander un créneau d'urgence</a>
+    </div>
+  </div>
+  <nav class="sticky top-0 z-50 border-b border-border bg-canvas/85 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="flex items-center gap-3 whitespace-nowrap font-serif text-base font-medium tracking-tight text-sage min-[360px]:text-lg sm:text-xl">
+          <img src="images/favicon.png" alt="" width="36" height="36" class="hidden size-9 rounded-full ring-1 ring-border sm:block">L'Espace Commun</a>
+        <div class="hidden items-center gap-5 xl:flex">
+          
+        <div class="group relative">
+          <a href="troubles/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Motifs de consultation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="troubles/depression-anxiete.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Dépression &amp; anxiété</a><a href="troubles/tca.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="troubles/tsa.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="troubles/tdah.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="troubles/confiance-en-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Confiance en soi</a><a href="troubles/travail-sur-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Démarrer un travail sur soi</a><a href="troubles/addictions.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Addictions</a><a href="troubles/perinatalite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Périnatalité</a><a href="troubles/obesite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Obésité</a><a href="troubles/maladies-chroniques.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Maladies chroniques</a><a href="troubles/souffrance-au-travail.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Burn-out &amp; travail</a>
+            <a href="troubles/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les motifs de consultation</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="approches/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Approches
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="approches/tcc.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">TCC</a><a href="approches/psychanalyse.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Psychanalyse</a><a href="approches/emdr.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">EMDR</a><a href="approches/hypnotherapie.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Hypnothérapie</a><a href="approches/systemique.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Systémique</a>
+            <a href="approches/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Comprendre les approches</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="bilans/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Bilans
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="bilans/wisc-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WISC-V · enfant</a><a href="bilans/wais-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WAIS-V · adulte</a><a href="bilans/bilans-projectifs.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Bilans projectifs</a>
+            <a href="bilans/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les bilans</a>
+          </div>
+        </div>
+          <a href="equipe.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">L'équipe</a>
+          <a href="infos.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Infos &amp; tarifs</a>
+          <a href="blog/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Blog</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="rdv.html" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 shrink-0 whitespace-nowrap px-3 sm:px-4"><span class="hidden sm:inline">Prendre rendez-vous</span><span class="hidden min-[360px]:inline sm:hidden">Rendez-vous</span><span class="min-[360px]:hidden">RDV</span></a>
+        <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" class="-mr-2 rounded-md p-2 text-sage transition-colors hover:bg-secondary xl:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path class="icon-open" d="M4 7h16M4 12h16M4 17h16"/><path class="icon-close hidden" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu-mobile" class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-canvas px-4 py-2 sm:px-6 xl:hidden">
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Motifs de consultation
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="troubles/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="troubles/depression-anxiete.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a><a href="troubles/tca.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="troubles/tsa.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="troubles/tdah.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="troubles/confiance-en-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Confiance en soi</a><a href="troubles/travail-sur-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a><a href="troubles/addictions.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Addictions</a><a href="troubles/perinatalite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Périnatalité</a><a href="troubles/obesite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Obésité</a><a href="troubles/maladies-chroniques.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a><a href="troubles/souffrance-au-travail.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Approches
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="approches/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="approches/tcc.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">TCC</a><a href="approches/psychanalyse.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Psychanalyse</a><a href="approches/emdr.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">EMDR</a><a href="approches/hypnotherapie.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a><a href="approches/systemique.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Systémique</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Bilans
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="bilans/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="bilans/wisc-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a><a href="bilans/wais-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a><a href="bilans/bilans-projectifs.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></div>
+      </details>
+      <a href="equipe.html" class="block border-b border-border py-3 text-base">L'équipe</a>
+      <a href="infos.html" class="block border-b border-border py-3 text-base">Infos &amp; tarifs</a>
+      <a href="blog/index.html" class="block border-b border-border py-3 text-base">Blog</a>
+      <a href="rdv.html" class="mt-4 mb-2 flex inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre rendez-vous</a>
+    </div>
+  </nav>
+<main>
+
+  <header class="px-6 pt-10 pb-12 md:pt-14">
+    <div class="mx-auto max-w-6xl">
+      <nav aria-label="Fil d'Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-xs text-muted-foreground"><a href="index.html" class="hover:text-sage">Accueil</a><span aria-hidden="true" class="text-border">/</span><span class="text-foreground">L&#x27;équipe</span></nav>
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-clay">Le réseau</p>
+      <h1 class="mb-6 max-w-[22ch] text-balance font-serif text-4xl leading-tight text-sage md:text-5xl">Les psychologues de L'Espace Commun</h1>
+      <p class="max-w-[60ch] text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">Des psychologues cliniciens diplômés, aux approches et spécialités complémentaires. Filtrez selon votre besoin, ou laissez-nous vous orienter.</p>
+    </div>
+  </header>
+  
+  <section class="bg-secondary px-6 py-16 md:py-24">
+    <div class="mx-auto grid grid-cols-1 max-w-6xl items-center gap-10 md:grid-cols-[18rem_1fr] md:gap-16">
+      <figure class="mx-auto w-full max-w-72">
+        <img src="images/andie.jpg" alt="Portrait de Andie Bedoucha, gérante de L'Espace Commun" width="900" height="900" loading="lazy" class="aspect-[4/5] w-full rounded-2xl object-cover shadow-xl shadow-sage/10">
+        <figcaption class="mt-4 text-center">
+          <span class="block font-serif text-lg text-sage">Andie Bedoucha</span>
+          <span class="text-xs uppercase tracking-widest text-muted-foreground">Gérante du centre · Psychologue clinicienne</span>
+        </figcaption>
+      </figure>
+      <div>
+        <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-clay">Un premier contact, une orientation sur mesure</p>
+        <h2 class="mb-6 max-w-[26ch] text-balance font-serif text-3xl text-sage md:text-4xl">Chaque accompagnement est pensé au plus près de la personne.</h2>
+        <p class="mb-4 max-w-[62ch] leading-relaxed text-muted-foreground">Dans un cadre bienveillant, confidentiel et adapté à vos besoins. Vous n'avez pas à chercher seul le bon interlocuteur : en tant que gérante de L'Espace Commun, Andie reçoit votre demande, prend le temps de la comprendre, puis vous met en relation avec le ou la psychologue du réseau le plus adapté.</p>
+        <p class="mb-8 max-w-[62ch] leading-relaxed text-muted-foreground">Cette orientation tient compte de trois choses :</p>
+        <ul class="mb-8 grid max-w-[62ch] gap-5">
+            <li class="flex gap-4">
+              <span class="mt-1 flex size-7 shrink-0 items-center justify-center rounded-full bg-clay/15 font-serif text-sm text-ink">1</span>
+              <span><span class="block font-medium text-foreground">Vos besoins</span><span class="text-sm leading-relaxed text-muted-foreground">Ce que vous traversez, votre âge, ce que vous attendez d'un accompagnement.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 flex size-7 shrink-0 items-center justify-center rounded-full bg-clay/15 font-serif text-sm text-ink">2</span>
+              <span><span class="block font-medium text-foreground">Votre demande</span><span class="text-sm leading-relaxed text-muted-foreground">Une thérapie, un bilan, une approche particulière (TCC, psychanalyse, EMDR…).</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-1 flex size-7 shrink-0 items-center justify-center rounded-full bg-clay/15 font-serif text-sm text-ink">3</span>
+              <span><span class="block font-medium text-foreground">Votre localisation</span><span class="text-sm leading-relaxed text-muted-foreground">Le cabinet le plus proche de chez vous en Île-de-France (Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne…), ou la téléconsultation si vous habitez ailleurs en France ou à l'étranger.</span></span>
+            </li>
+        </ul>
+        <div class="flex flex-wrap gap-3">
+          <a href="rdv.html?motif=orientation" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 gap-2 px-5 py-3">Être orienté vers le bon psychologue <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="equipe.html#andie" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-5 py-3">Découvrir Andie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="px-6 py-16 md:py-24">
+    <div class="mx-auto flex max-w-6xl flex-col gap-12 md:flex-row">
+      <aside class="w-full shrink-0 space-y-8 md:w-64">
+        <div class="md:sticky md:top-28">
+          <h2 class="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Filtrer l'équipe</h2>
+          <div class="flex flex-wrap gap-x-6 gap-y-3 md:block md:space-y-2" id="filtres"><label class="flex cursor-pointer items-center gap-3 text-sm text-muted-foreground has-checked:text-sage"><input type="checkbox" value="enfants" class="peer sr-only"><span class="size-4 rounded border border-input peer-checked:border-sage peer-checked:bg-sage"></span>Enfants &amp; Adolescents</label><label class="flex cursor-pointer items-center gap-3 text-sm text-muted-foreground has-checked:text-sage"><input type="checkbox" value="adultes" class="peer sr-only"><span class="size-4 rounded border border-input peer-checked:border-sage peer-checked:bg-sage"></span>Adultes</label><label class="flex cursor-pointer items-center gap-3 text-sm text-muted-foreground has-checked:text-sage"><input type="checkbox" value="travail" class="peer sr-only"><span class="size-4 rounded border border-input peer-checked:border-sage peer-checked:bg-sage"></span>Psychologie du travail</label><label class="flex cursor-pointer items-center gap-3 text-sm text-muted-foreground has-checked:text-sage"><input type="checkbox" value="bilans" class="peer sr-only"><span class="size-4 rounded border border-input peer-checked:border-sage peer-checked:bg-sage"></span>Bilans &amp; Tests</label><label class="flex cursor-pointer items-center gap-3 text-sm text-muted-foreground has-checked:text-sage"><input type="checkbox" value="psychosomatique" class="peer sr-only"><span class="size-4 rounded border border-input peer-checked:border-sage peer-checked:bg-sage"></span>Psychosomatique</label></div>
+          <div class="mt-8 rounded-xl border border-clay/20 bg-clay/5 p-6">
+            <p class="mb-2 text-sm font-medium italic text-clay">Besoin d'aide pour choisir ?</p>
+            <p class="mb-4 text-xs leading-relaxed text-muted-foreground">Choisissez « Sans préférence » lors de la prise de rendez-vous : la gérante du centre vous oriente vers le praticien le plus adapté à votre demande et à votre localisation.</p>
+            <a href="rdv.html" class="text-xs font-semibold text-sage underline underline-offset-4">Prendre rendez-vous</a>
+          </div>
+          <div class="mt-6 rounded-xl border border-border p-6">
+            <p class="mb-2 text-sm font-medium text-sage">Psychologue, envie de rejoindre le réseau ?</p>
+            <a href="rejoindre.html" class="text-xs text-muted-foreground underline underline-offset-4">Proposer ma candidature</a>
+          </div>
+        </div>
+      </aside>
+      <div class="grid min-w-0 flex-1 grid-cols-1 gap-8">
+          <article id="andie" data-tags="enfants adultes travail" class="scroll-mt-28 flex flex-col gap-6 rounded-2xl border border-border bg-canvas p-6 transition-shadow hover:shadow-xl sm:flex-row md:p-8">
+            <img src="images/andie.jpg" alt="Portrait de Andie Bedoucha, Psychologue clinicienne · Gérante du centre" width="512" height="640" loading="lazy" class="aspect-[4/5] w-full max-w-56 shrink-0 rounded-md bg-secondary object-cover sm:h-60 sm:w-48 sm:max-w-none sm:aspect-auto">
+            <div class="min-w-0 flex-1">
+              <h2 class="font-serif text-2xl text-sage">Andie Bedoucha</h2>
+              <p class="text-sm text-muted-foreground">Psychologue clinicienne · Gérante du centre</p>
+              <p class="mt-4 max-w-[62ch] text-sm leading-relaxed text-foreground/85">Gérante de L&#x27;Espace Commun, je vous mets en relation avec le psychologue le plus adapté à votre demande et à votre lieu de vie. Psychologue clinicienne passée par la pédopsychiatrie de Sainte-Anne, j&#x27;accompagne aussi enfants, adolescents et adultes.</p>
+              <details class="mt-3 max-w-[62ch]">
+                <summary class="inline-flex items-center gap-1 text-sm font-medium text-sage underline underline-offset-4">Lire la présentation complète
+                  <svg class="chevron transition-transform" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                <div class="mt-4 space-y-3"><p class="text-sm leading-relaxed text-muted-foreground">En tant que gérante de L&#x27;Espace Commun, je suis votre premier interlocuteur : j&#x27;écoute votre demande, puis je vous oriente vers le ou la psychologue du réseau le plus adapté à vos besoins, à la nature de votre demande et à votre localisation, en cabinet ou en téléconsultation.</p><p class="text-sm leading-relaxed text-muted-foreground">Mon approche s&#x27;inscrit dans une écoute attentive, bienveillante et individualisée, afin de proposer à chacun un accompagnement adapté à sa situation et à ses besoins.</p><p class="text-sm leading-relaxed text-muted-foreground">Psychologue clinicienne, j&#x27;ai exercé en pédopsychiatrie à l&#x27;Hôpital Sainte-Anne, où j&#x27;ai accompagné des enfants et des adolescents dans différentes problématiques psychologiques et émotionnelles.</p><p class="text-sm leading-relaxed text-muted-foreground">Je propose également un accompagnement auprès des adultes, notamment dans le domaine de la psychologie du travail, autour des questionnements ou situations de souffrance au travail, ou des périodes de transition.</p><p class="text-sm leading-relaxed text-muted-foreground">Je reçois par ailleurs les adultes qui souhaitent entreprendre une psychothérapie d&#x27;orientation analytique. Cette approche propose un espace de parole permettant de mettre en lumière ce qui se joue derrière les difficultés rencontrées, d&#x27;explorer son histoire personnelle et de mieux comprendre les mécanismes qui influencent nos pensées, nos émotions et nos relations.</p></div>
+              </details>
+              <div class="my-5 flex flex-wrap gap-2"><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Gérante du centre</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Orientation</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Enfants &amp; Ados</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Psychologie du travail</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Psychothérapie analytique</span></div>
+              <p class="mb-5 text-xs leading-relaxed text-muted-foreground">À lire : <a href="troubles/confiance-en-soi.html" class="underline decoration-border underline-offset-4 hover:text-sage">Confiance en soi</a> · <a href="troubles/travail-sur-soi.html" class="underline decoration-border underline-offset-4 hover:text-sage">Démarrer un travail sur soi</a> · <a href="troubles/souffrance-au-travail.html" class="underline decoration-border underline-offset-4 hover:text-sage">Burn-out &amp; travail</a> · <a href="approches/psychanalyse.html" class="underline decoration-border underline-offset-4 hover:text-sage">Psychanalyse</a></p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="rdv.html?psy=andie" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre RDV avec Andie</a>
+                <span class="text-[11px] uppercase tracking-wider text-muted-foreground">FR · Paris 11 · Romainville · Téléconsultation</span>
+              </div>
+            </div>
+          </article>
+          <article id="viva" data-tags="enfants adultes bilans psychosomatique" class="scroll-mt-28 flex flex-col gap-6 rounded-2xl border border-border bg-canvas p-6 transition-shadow hover:shadow-xl sm:flex-row md:p-8">
+            <img src="images/viva.jpg" alt="Portrait de Viva Tavlitzki, Psychologue clinicienne, psychosomatique" width="512" height="640" loading="lazy" class="aspect-[4/5] w-full max-w-56 shrink-0 rounded-md bg-secondary object-cover sm:h-60 sm:w-48 sm:max-w-none sm:aspect-auto">
+            <div class="min-w-0 flex-1">
+              <h2 class="font-serif text-2xl text-sage">Viva Tavlitzki</h2>
+              <p class="text-sm text-muted-foreground">Psychologue clinicienne, psychosomatique</p>
+              <p class="mt-4 max-w-[62ch] text-sm leading-relaxed text-foreground/85">Spécialisée en psychosomatique, quand les conflits internes s&#x27;expriment sur le corps. Exerçant à l&#x27;hôpital Necker et en CMP, j&#x27;accompagne adolescents, adultes et parents, et réalise bilans cognitifs et tests projectifs.</p>
+              <details class="mt-3 max-w-[62ch]">
+                <summary class="inline-flex items-center gap-1 text-sm font-medium text-sage underline underline-offset-4">Lire la présentation complète
+                  <svg class="chevron transition-transform" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                <div class="mt-4 space-y-3"><blockquote class="mt-4 border-l-2 border-clay/40 pl-3 text-sm italic leading-relaxed text-clay">« Chaque thérapie doit être construite différemment pour chaque patient, car chacun a une histoire unique » — I. Yalom</blockquote><p class="text-sm leading-relaxed text-muted-foreground">Je suis spécialisée en psychosomatique, c&#x27;est-à-dire quand les conflits internes s&#x27;expriment sur le corps.</p><p class="text-sm leading-relaxed text-muted-foreground">L&#x27;idée est alors de tirer les fils jusqu&#x27;à la source du symptôme, grâce à l&#x27;association libre, méthode de l&#x27;orientation psychanalytique.</p><p class="text-sm leading-relaxed text-muted-foreground">Exerçant à l&#x27;hôpital Necker et en Centre Médico-Psychologique, la guidance parentale ainsi que la psychopathologie des adolescents et des adultes font partie de mon champ de compétence.</p><p class="text-sm leading-relaxed text-muted-foreground">Je peux également évaluer le fonctionnement cognitif grâce à des outils standardisés et des tests projectifs.</p></div>
+              </details>
+              <div class="my-5 flex flex-wrap gap-2"><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Psychosomatique</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Maladies chroniques</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Guidance parentale</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">WISC-V / WAIS</span><span class="rounded bg-secondary px-2 py-0.5 text-[11px] text-secondary-foreground">Tests projectifs</span></div>
+              <p class="mb-5 text-xs leading-relaxed text-muted-foreground">À lire : <a href="troubles/maladies-chroniques.html" class="underline decoration-border underline-offset-4 hover:text-sage">Maladies chroniques</a> · <a href="troubles/depression-anxiete.html" class="underline decoration-border underline-offset-4 hover:text-sage">Dépression &amp; anxiété</a> · <a href="approches/psychanalyse.html" class="underline decoration-border underline-offset-4 hover:text-sage">Psychanalyse</a> · <a href="bilans/wisc-v.html" class="underline decoration-border underline-offset-4 hover:text-sage">WISC-V · enfant</a> · <a href="bilans/wais-v.html" class="underline decoration-border underline-offset-4 hover:text-sage">WAIS-V · adulte</a> · <a href="bilans/bilans-projectifs.html" class="underline decoration-border underline-offset-4 hover:text-sage">Bilans projectifs</a></p>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="rdv.html?psy=viva" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre RDV avec Viva</a>
+                <span class="text-[11px] uppercase tracking-wider text-muted-foreground">FR · Paris 11 · Romainville · Téléconsultation</span>
+              </div>
+            </div>
+          </article>
+        <p id="aucun" hidden class="rounded-xl bg-secondary p-6 text-sm text-muted-foreground">Aucun psychologue ne correspond à tous ces critères. Décochez un filtre, ou <a href="rdv.html" class="text-sage underline">laissez-nous vous orienter</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="border-t border-border bg-secondary/50 px-6 pt-16 pb-10">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <div class="mb-3 font-serif text-2xl text-sage">L'Espace Commun</div>
+          <p class="mb-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">Centre de psychologie</p>
+          <p class="mb-6 font-serif text-sm italic text-clay">Écoute · Bienveillance · Alliance</p>
+          <p class="text-sm leading-relaxed text-muted-foreground">Réseau de psychologues en Île-de-France (75 · 92 · 93 · 94…)<br>Centres : 133 bd Voltaire, 75011 Paris · 1 rue de Benfleet, 93230 Romainville<br>Téléconsultation partout en France</p>
+          <a href="mailto:lespacecommunpsy@gmail.com" class="mt-4 inline-block text-sm text-sage underline underline-offset-4">lespacecommunpsy@gmail.com</a>
+          <a href="rejoindre.html" class="mt-3 flex w-fit items-center gap-2 text-sm font-medium text-sage">Vous êtes psychologue ? Rejoignez le réseau <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Motifs de consultation</p>
+          <ul class="space-y-2"><li><a href="troubles/depression-anxiete.html" class="text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a></li><li><a href="troubles/tca.html" class="text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a></li><li><a href="troubles/tsa.html" class="text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a></li><li><a href="troubles/tdah.html" class="text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a></li><li><a href="troubles/confiance-en-soi.html" class="text-sm text-muted-foreground hover:text-sage">Confiance en soi</a></li><li><a href="troubles/travail-sur-soi.html" class="text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a></li><li><a href="troubles/addictions.html" class="text-sm text-muted-foreground hover:text-sage">Addictions</a></li><li><a href="troubles/perinatalite.html" class="text-sm text-muted-foreground hover:text-sage">Périnatalité</a></li><li><a href="troubles/obesite.html" class="text-sm text-muted-foreground hover:text-sage">Obésité</a></li><li><a href="troubles/maladies-chroniques.html" class="text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a></li><li><a href="troubles/souffrance-au-travail.html" class="text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Approches</p>
+          <ul class="space-y-2"><li><a href="approches/tcc.html" class="text-sm text-muted-foreground hover:text-sage">TCC</a></li><li><a href="approches/psychanalyse.html" class="text-sm text-muted-foreground hover:text-sage">Psychanalyse</a></li><li><a href="approches/emdr.html" class="text-sm text-muted-foreground hover:text-sage">EMDR</a></li><li><a href="approches/hypnotherapie.html" class="text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a></li><li><a href="approches/systemique.html" class="text-sm text-muted-foreground hover:text-sage">Systémique</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Bilans</p>
+          <ul class="space-y-2"><li><a href="bilans/wisc-v.html" class="text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a></li><li><a href="bilans/wais-v.html" class="text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a></li><li><a href="bilans/bilans-projectifs.html" class="text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></li></ul>
+        </div>
+      </div>
+      <div class="mt-12 rounded-xl border border-border bg-canvas p-5 text-sm leading-relaxed text-muted-foreground">
+        <strong class="font-medium text-foreground">En cas d'urgence vitale</strong>, appelez le <strong class="text-foreground">15</strong> ou le <strong class="text-foreground">112</strong>. Si vous avez des idées suicidaires ou êtes inquiet pour un proche : <strong class="text-foreground">3114</strong>, numéro national de prévention du suicide, gratuit, 24h/24.
+      </div>
+      <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row">
+        <span>© <span data-annee>2026</span> L'Espace Commun</span>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><a href="equipe.html" class="hover:text-sage">L'équipe</a><a href="rdv.html" class="hover:text-sage">Rendez-vous</a><a href="blog/index.html" class="hover:text-sage">Blog</a><a href="rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

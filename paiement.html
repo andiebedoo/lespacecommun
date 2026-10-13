@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Votre rendez-vous — L&#x27;Espace Commun</title>
+  <meta name="description" content="Récapitulatif et paiement de votre rendez-vous confirmé." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Fraunces", ui-serif, Georgia, serif;
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-sage: var(--sage);
+      --color-sage-foreground: var(--sage-foreground);
+      --color-clay: var(--clay);
+      --color-ink: var(--ink);
+      --color-ink-foreground: var(--ink-foreground);
+      --color-canvas: var(--canvas);
+    }
+    :root {
+      --background: oklch(97.3% .005 95.1);
+      --foreground: oklch(21% .006 285.9);
+      --secondary: oklch(96.7% .001 286.4);
+      --secondary-foreground: oklch(33.5% .019 169.7);
+      --muted-foreground: oklch(55.2% .014 285.9);
+      --border: oklch(92% .004 286.3);
+      --input: oklch(92% .004 286.3);
+      --ring: oklch(33.5% .019 169.7);
+      --sage: oklch(33.5% .019 169.7);
+      --sage-foreground: oklch(97.3% .005 95.1);
+      --clay: oklch(73.2% .06 59.8);
+      --ink: oklch(28.3% .039 249.3);
+      --ink-foreground: oklch(97.3% .005 95.1);
+      --canvas: oklch(97.3% .005 95.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--background); color: var(--foreground); }
+    h1, h2, h3 { overflow-wrap: break-word; }
+    * { border-color: var(--border); }
+    .prose-ec p { margin-bottom: 1rem; line-height: 1.75; color: var(--muted-foreground); }
+    .prose-ec ul { margin: 0 0 1rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+    .prose-ec li { margin-bottom: .5rem; line-height: 1.7; }
+    .prose-ec li::marker { color: var(--clay); }
+    .prose-ec strong { color: var(--foreground); font-weight: 500; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<div class="min-h-screen bg-canvas font-sans text-foreground selection:bg-clay/20">
+
+  <div class="bg-ink px-6 py-3 text-ink-foreground">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
+      <p class="text-pretty text-sm font-medium">Une situation de crise ? Nos créneaux d'urgence sont disponibles sous 24h.</p>
+      <a href="rdv.html?motif=urgence" class="text-sm font-semibold underline decoration-ink-foreground/40 underline-offset-4 transition-colors hover:decoration-ink-foreground">Demander un créneau d'urgence</a>
+    </div>
+  </div>
+  <nav class="sticky top-0 z-50 border-b border-border bg-canvas/85 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="flex items-center gap-3 whitespace-nowrap font-serif text-base font-medium tracking-tight text-sage min-[360px]:text-lg sm:text-xl">
+          <img src="images/favicon.png" alt="" width="36" height="36" class="hidden size-9 rounded-full ring-1 ring-border sm:block">L'Espace Commun</a>
+        <div class="hidden items-center gap-5 xl:flex">
+          
+        <div class="group relative">
+          <a href="troubles/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Motifs de consultation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="troubles/depression-anxiete.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Dépression &amp; anxiété</a><a href="troubles/tca.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="troubles/tsa.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="troubles/tdah.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="troubles/confiance-en-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Confiance en soi</a><a href="troubles/travail-sur-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Démarrer un travail sur soi</a><a href="troubles/addictions.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Addictions</a><a href="troubles/perinatalite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Périnatalité</a><a href="troubles/obesite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Obésité</a><a href="troubles/maladies-chroniques.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Maladies chroniques</a><a href="troubles/souffrance-au-travail.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Burn-out &amp; travail</a>
+            <a href="troubles/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les motifs de consultation</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="approches/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Approches
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="approches/tcc.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">TCC</a><a href="approches/psychanalyse.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Psychanalyse</a><a href="approches/emdr.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">EMDR</a><a href="approches/hypnotherapie.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Hypnothérapie</a><a href="approches/systemique.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Systémique</a>
+            <a href="approches/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Comprendre les approches</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="bilans/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Bilans
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="bilans/wisc-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WISC-V · enfant</a><a href="bilans/wais-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WAIS-V · adulte</a><a href="bilans/bilans-projectifs.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Bilans projectifs</a>
+            <a href="bilans/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les bilans</a>
+          </div>
+        </div>
+          <a href="equipe.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">L'équipe</a>
+          <a href="infos.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Infos &amp; tarifs</a>
+          <a href="blog/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Blog</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="rdv.html" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 shrink-0 whitespace-nowrap px-3 sm:px-4"><span class="hidden sm:inline">Prendre rendez-vous</span><span class="hidden min-[360px]:inline sm:hidden">Rendez-vous</span><span class="min-[360px]:hidden">RDV</span></a>
+        <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" class="-mr-2 rounded-md p-2 text-sage transition-colors hover:bg-secondary xl:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path class="icon-open" d="M4 7h16M4 12h16M4 17h16"/><path class="icon-close hidden" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu-mobile" class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-canvas px-4 py-2 sm:px-6 xl:hidden">
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Motifs de consultation
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="troubles/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="troubles/depression-anxiete.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a><a href="troubles/tca.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="troubles/tsa.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="troubles/tdah.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="troubles/confiance-en-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Confiance en soi</a><a href="troubles/travail-sur-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a><a href="troubles/addictions.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Addictions</a><a href="troubles/perinatalite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Périnatalité</a><a href="troubles/obesite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Obésité</a><a href="troubles/maladies-chroniques.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a><a href="troubles/souffrance-au-travail.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Approches
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="approches/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="approches/tcc.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">TCC</a><a href="approches/psychanalyse.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Psychanalyse</a><a href="approches/emdr.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">EMDR</a><a href="approches/hypnotherapie.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a><a href="approches/systemique.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Systémique</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Bilans
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="bilans/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="bilans/wisc-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a><a href="bilans/wais-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a><a href="bilans/bilans-projectifs.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></div>
+      </details>
+      <a href="equipe.html" class="block border-b border-border py-3 text-base">L'équipe</a>
+      <a href="infos.html" class="block border-b border-border py-3 text-base">Infos &amp; tarifs</a>
+      <a href="blog/index.html" class="block border-b border-border py-3 text-base">Blog</a>
+      <a href="rdv.html" class="mt-4 mb-2 flex inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre rendez-vous</a>
+    </div>
+  </nav>
+<main>
+
+  <section class="px-6 pt-10 pb-20 md:pt-14">
+    <div class="mx-auto max-w-3xl" id="paiement">
+      <div id="p-invalide" hidden class="rounded-2xl bg-secondary p-8 ring-1 ring-border">
+        <h1 class="mb-3 font-serif text-3xl text-sage">Ce lien n'est pas valide</h1>
+        <p class="mb-6 text-muted-foreground">Le lien de paiement semble incomplet. Utilisez le lien reçu dans votre email de confirmation, ou écrivez-nous : nous vous en renvoyons un.</p>
+        <a href="mailto:lespacecommunpsy@gmail.com" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 px-5 py-3">Nous écrire</a>
+      </div>
+      <div id="p-contenu" hidden>
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage ring-1 ring-sage/20"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Rendez-vous confirmé</p>
+        <h1 class="mb-3 text-balance font-serif text-4xl leading-tight text-sage md:text-5xl">Votre rendez-vous</h1>
+        <p class="mb-10 text-muted-foreground">Voici le récapitulatif de votre séance. Vous pouvez régler dès maintenant, ou plus tard.</p>
+
+        <div class="mb-8 overflow-hidden rounded-2xl ring-1 ring-border">
+          <div class="bg-sage p-6 text-sage-foreground md:p-8">
+            <p id="p-date" class="font-serif text-2xl md:text-3xl"></p>
+            <p id="p-heure" class="mt-1 text-sage-foreground/80"></p>
+          </div>
+          <dl class="grid gap-5 bg-canvas p-6 sm:grid-cols-2 md:p-8">
+            <div><dt class="mb-1 text-xs uppercase tracking-widest text-muted-foreground">Psychologue</dt><dd id="p-psy" class="font-medium"></dd></div>
+            <div><dt class="mb-1 text-xs uppercase tracking-widest text-muted-foreground">Séance</dt><dd id="p-seance" class="font-medium"></dd></div>
+            <div class="sm:col-span-2"><dt class="mb-1 text-xs uppercase tracking-widest text-muted-foreground">Lieu</dt><dd id="p-lieu" class="font-medium"></dd><dd id="p-adresse" class="text-sm text-muted-foreground"></dd></div>
+            <div class="flex items-baseline justify-between border-t border-border pt-5 sm:col-span-2"><dt class="text-sm text-muted-foreground">Montant</dt><dd id="p-montant" class="font-serif text-4xl text-sage"></dd></div>
+          </dl>
+        </div>
+
+        <h2 class="mb-4 font-serif text-2xl text-sage">Comment souhaitez-vous régler ?</h2>
+        <div class="mb-6 grid gap-4" id="p-options">
+          <a id="p-payer" hidden href="#" class="group flex items-center gap-5 rounded-2xl bg-sage p-6 text-sage-foreground shadow-lg shadow-sage/10 transition-colors hover:bg-sage/90">
+            <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-sage-foreground/10"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+            <span class="flex-1"><span class="block font-medium">Payer maintenant par carte</span><span class="block text-sm text-sage-foreground/75">Carte bancaire, Apple Pay ou Google Pay · Paiement sécurisé</span></span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div id="p-surplace" hidden class="flex items-center gap-5 rounded-2xl border border-border p-6">
+            <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-clay/15 text-ink"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <span><span class="block font-medium">Payer le jour de la séance en espèces</span><span id="p-surplace-texte" class="block text-sm text-muted-foreground">Directement auprès de votre psychologue, au cabinet. Rien d'autre à faire d'ici là.</span></span>
+          </div>
+        </div>
+        <button type="button" id="p-agenda" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary mb-12 gap-2 px-5 py-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ajouter à mon agenda</button>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl bg-secondary p-5 ring-1 ring-border"><p class="mb-1 text-sm font-medium">Un empêchement ?</p><p class="text-xs leading-relaxed text-muted-foreground">Prévenez-nous au moins 48 h à l'avance à <a href="mailto:lespacecommunpsy@gmail.com" class="underline">lespacecommunpsy@gmail.com</a>. Au-delà, la séance peut être due.</p></div>
+          <div class="rounded-xl bg-secondary p-5 ring-1 ring-border"><p class="mb-1 text-sm font-medium">Pour votre mutuelle</p><p class="text-xs leading-relaxed text-muted-foreground">Vous recevez un reçu par email après un paiement en ligne, et votre psychologue vous remet une note d'honoraires.</p></div>
+        </div>
+        <p class="mt-6 flex items-center gap-2 text-xs text-muted-foreground"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Vos coordonnées bancaires sont saisies chez notre prestataire de paiement certifié et ne transitent jamais par notre site.</p>
+      </div>
+      <noscript><p class="rounded-xl bg-secondary p-6 text-sm">Activez JavaScript pour afficher votre rendez-vous, ou écrivez-nous à lespacecommunpsy@gmail.com.</p></noscript>
+    </div>
+  </section>
+</main>
+
+  <footer class="border-t border-border bg-secondary/50 px-6 pt-16 pb-10">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <div class="mb-3 font-serif text-2xl text-sage">L'Espace Commun</div>
+          <p class="mb-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">Centre de psychologie</p>
+          <p class="mb-6 font-serif text-sm italic text-clay">Écoute · Bienveillance · Alliance</p>
+          <p class="text-sm leading-relaxed text-muted-foreground">Réseau de psychologues en Île-de-France (75 · 92 · 93 · 94…)<br>Centres : 133 bd Voltaire, 75011 Paris · 1 rue de Benfleet, 93230 Romainville<br>Téléconsultation partout en France</p>
+          <a href="mailto:lespacecommunpsy@gmail.com" class="mt-4 inline-block text-sm text-sage underline underline-offset-4">lespacecommunpsy@gmail.com</a>
+          <a href="rejoindre.html" class="mt-3 flex w-fit items-center gap-2 text-sm font-medium text-sage">Vous êtes psychologue ? Rejoignez le réseau <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Motifs de consultation</p>
+          <ul class="space-y-2"><li><a href="troubles/depression-anxiete.html" class="text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a></li><li><a href="troubles/tca.html" class="text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a></li><li><a href="troubles/tsa.html" class="text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a></li><li><a href="troubles/tdah.html" class="text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a></li><li><a href="troubles/confiance-en-soi.html" class="text-sm text-muted-foreground hover:text-sage">Confiance en soi</a></li><li><a href="troubles/travail-sur-soi.html" class="text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a></li><li><a href="troubles/addictions.html" class="text-sm text-muted-foreground hover:text-sage">Addictions</a></li><li><a href="troubles/perinatalite.html" class="text-sm text-muted-foreground hover:text-sage">Périnatalité</a></li><li><a href="troubles/obesite.html" class="text-sm text-muted-foreground hover:text-sage">Obésité</a></li><li><a href="troubles/maladies-chroniques.html" class="text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a></li><li><a href="troubles/souffrance-au-travail.html" class="text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Approches</p>
+          <ul class="space-y-2"><li><a href="approches/tcc.html" class="text-sm text-muted-foreground hover:text-sage">TCC</a></li><li><a href="approches/psychanalyse.html" class="text-sm text-muted-foreground hover:text-sage">Psychanalyse</a></li><li><a href="approches/emdr.html" class="text-sm text-muted-foreground hover:text-sage">EMDR</a></li><li><a href="approches/hypnotherapie.html" class="text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a></li><li><a href="approches/systemique.html" class="text-sm text-muted-foreground hover:text-sage">Systémique</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Bilans</p>
+          <ul class="space-y-2"><li><a href="bilans/wisc-v.html" class="text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a></li><li><a href="bilans/wais-v.html" class="text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a></li><li><a href="bilans/bilans-projectifs.html" class="text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></li></ul>
+        </div>
+      </div>
+      <div class="mt-12 rounded-xl border border-border bg-canvas p-5 text-sm leading-relaxed text-muted-foreground">
+        <strong class="font-medium text-foreground">En cas d'urgence vitale</strong>, appelez le <strong class="text-foreground">15</strong> ou le <strong class="text-foreground">112</strong>. Si vous avez des idées suicidaires ou êtes inquiet pour un proche : <strong class="text-foreground">3114</strong>, numéro national de prévention du suicide, gratuit, 24h/24.
+      </div>
+      <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row">
+        <span>© <span data-annee>2026</span> L'Espace Commun</span>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><a href="equipe.html" class="hover:text-sage">L'équipe</a><a href="rdv.html" class="hover:text-sage">Rendez-vous</a><a href="blog/index.html" class="hover:text-sage">Blog</a><a href="rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/site.js"></script>
+<script src="assets/donnees.js"></script>
+<script src="assets/paiement.js"></script>
+</body>
+</html>
