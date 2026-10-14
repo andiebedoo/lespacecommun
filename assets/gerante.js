@@ -1,8 +1,8 @@
-// Espace gérante : prépare le lien de paiement et l'email de confirmation d'un RDV.
+// Espace gérante : prépare le lien récapitulatif et l'email de confirmation d'un RDV.
 // Rien n'est envoyé ni enregistré : tout se passe dans le navigateur.
 
 (() => {
-const { lireRdv, montant, texteRdv, lienStripe } = window.ECPaiement;
+const { lireRdv, montant, texteRdv, rdvLienPsy, deNom } = window.ECPaiement;
 const { paiement } = window.EC;
 const formG = document.getElementById('g-form');
 const champ = (nom) => formG.elements[nom];
@@ -31,10 +31,19 @@ function mettreAJour() {
     return;
   }
   const t = texteRdv(rdv);
-  const enLigne = Boolean(lienStripe(rdv));
-  alerte.textContent = enLigne
-    ? 'Le patient pourra payer maintenant par carte, ou le jour de la séance en espèces.'
-    : 'Paiement en ligne pas encore activé pour ce montant : le patient réglera auprès du psychologue.';
+  const enLigne = rdv.l === 'visio' && Boolean(rdvLienPsy(rdv));
+  const qui = rdv.p ? t.psy : 'votre psychologue';
+  let reglement;
+  if (rdv.l !== 'visio') {
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, le jour de la séance, au cabinet : en espèces ou par carte.`;
+    alerte.textContent = 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
+  } else if (enLigne) {
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)} : par carte via le lien de paiement sécurisé de la page ci-dessous, ou par virement bancaire.`;
+    alerte.textContent = 'Téléconsultation : paiement par carte (lien du psychologue) ou par virement.';
+  } else {
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte ou par virement bancaire : ses coordonnées de paiement vous seront transmises avant la séance.`;
+    alerte.textContent = 'Téléconsultation : ce psychologue n\'a pas de lien de paiement sur le site. Pensez à transmettre au patient son lien de paiement ou son RIB.';
+  }
   document.getElementById('g-montant').textContent = `${montant(rdv)} €`;
   document.getElementById('g-lien').value = url;
   document.getElementById('g-apercu').href = url;
@@ -50,9 +59,7 @@ function mettreAJour() {
     `• ${lieu}`,
     `• ${t.seance} : ${t.montant}`,
     '',
-    enLigne
-      ? 'Vous pouvez payer maintenant par carte, en ligne et de façon sécurisée, ou payer le jour de la séance en espèces. Retrouvez le récapitulatif et le paiement ici :'
-      : `${rdv.l === 'visio' ? 'Votre psychologue vous indiquera comment régler avant la séance.' : 'Le règlement se fait le jour de la séance, en espèces, auprès de votre psychologue.'} Retrouvez le récapitulatif de votre rendez-vous (et ajoutez-le à votre agenda) ici :`,
+    `${reglement} Retrouvez le récapitulatif de votre rendez-vous (et ajoutez-le à votre agenda) ici :`,
     url,
     '',
     'En cas d\'empêchement, merci de me prévenir au moins 48 h à l\'avance.',
@@ -63,7 +70,7 @@ function mettreAJour() {
     paiement.email,
   ].join('\n');
   document.getElementById('g-email').value = email;
-  document.getElementById('g-sms').value = `Bonjour${prenom ? ` ${prenom}` : ''}, votre RDV à L'Espace Commun est confirmé le ${t.date} à ${t.heure} avec ${t.psy}. Récapitulatif${enLigne ? ' et paiement' : ''} : ${url}`;
+  document.getElementById('g-sms').value = `Bonjour${prenom ? ` ${prenom}` : ''}, votre RDV à L'Espace Commun est confirmé le ${t.date} à ${t.heure} avec ${t.psy}. Récapitulatif : ${url}`;
   const sujet = 'Confirmation de votre rendez-vous — L\'Espace Commun';
   document.getElementById('g-mailto').href = `mailto:${encodeURIComponent(champ('email').value.trim())}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(email)}`;
 }

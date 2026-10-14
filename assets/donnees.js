@@ -112,6 +112,15 @@ window.EC = {
  "psys": {
   "andie": {
    "nom": "Andie Bedoucha",
+   "liens": {
+    "95": "https://buy.stripe.com/3cIfZh6db2pW5kndwccjS04",
+    "120": "https://buy.stripe.com/dRmeVddFDd4A5kn77OcjS08",
+    "100": "https://buy.stripe.com/eVq7sL8lj5C828bgIocjS03",
+    "350": "https://buy.stripe.com/4gMfZh8lj8OkeUXbo4cjS01",
+    "76": "https://buy.stripe.com/eVq7sLfNLd4A6ordwccjS05",
+    "96": "https://buy.stripe.com/7sYcN56db2pWcMPbo4cjS07",
+    "80": "https://buy.stripe.com/9B6cN59pnaWs003ak0cjS09"
+   },
    "slugs": [
     "confiance-en-soi",
     "travail-sur-soi",
@@ -124,6 +133,7 @@ window.EC = {
   },
   "viva": {
    "nom": "Viva Tavlitzki",
+   "liens": {},
    "slugs": [
     "maladies-chroniques",
     "depression-anxiete",
@@ -143,15 +153,6 @@ window.EC = {
   "bilan": "350 €"
  },
  "paiement": {
-  "liens": {
-   "95": "https://buy.stripe.com/3cIfZh6db2pW5kndwccjS04",
-   "120": "https://buy.stripe.com/dRmeVddFDd4A5kn77OcjS08",
-   "100": "https://buy.stripe.com/eVq7sL8lj5C828bgIocjS03",
-   "350": "https://buy.stripe.com/4gMfZh8lj8OkeUXbo4cjS01",
-   "76": "https://buy.stripe.com/eVq7sLfNLd4A6ordwccjS05",
-   "96": "https://buy.stripe.com/7sYcN56db2pWcMPbo4cjS07",
-   "80": "https://buy.stripe.com/9B6cN59pnaWs003ak0cjS09"
-  },
   "adresses": {
    "paris": "133 boulevard Voltaire, 75011 Paris · Interphone : Espace Commun · Métro Voltaire",
    "romainville": "1 rue de Benfleet, 93230 Romainville · RDC, accès PMR · Métro Mairie de Romainville"

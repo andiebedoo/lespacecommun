@@ -151,7 +151,7 @@
       <div id="p-contenu" hidden>
         <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage ring-1 ring-sage/20"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Rendez-vous confirmé</p>
         <h1 class="mb-3 text-balance font-serif text-4xl leading-tight text-sage md:text-5xl">Votre rendez-vous</h1>
-        <p class="mb-10 text-muted-foreground">Voici le récapitulatif de votre séance. Vous pouvez régler dès maintenant, ou plus tard.</p>
+        <p class="mb-10 text-muted-foreground">Voici le récapitulatif de votre séance et la façon de régler votre psychologue.</p>
 
         <div class="mb-8 overflow-hidden rounded-2xl ring-1 ring-border">
           <div class="bg-sage p-6 text-sage-foreground md:p-8">
@@ -166,25 +166,29 @@
           </dl>
         </div>
 
-        <h2 class="mb-4 font-serif text-2xl text-sage">Comment souhaitez-vous régler ?</h2>
+        <h2 class="mb-4 font-serif text-2xl text-sage">Comment régler votre séance ?</h2>
         <div class="mb-6 grid gap-4" id="p-options">
           <a id="p-payer" hidden href="#" class="group flex items-center gap-5 rounded-2xl bg-sage p-6 text-sage-foreground shadow-lg shadow-sage/10 transition-colors hover:bg-sage/90">
             <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-sage-foreground/10"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
-            <span class="flex-1"><span class="block font-medium">Payer maintenant par carte</span><span class="block text-sm text-sage-foreground/75">Carte bancaire, Apple Pay ou Google Pay · Paiement sécurisé</span></span>
+            <span class="flex-1"><span class="block font-medium">Payer par carte</span><span class="block text-sm text-sage-foreground/75">Lien de paiement sécurisé de votre psychologue · Carte bancaire, Apple Pay ou Google Pay</span></span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <div id="p-surplace" hidden class="flex items-center gap-5 rounded-2xl border border-border p-6">
             <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-clay/15 text-ink"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span><span class="block font-medium">Payer le jour de la séance en espèces</span><span id="p-surplace-texte" class="block text-sm text-muted-foreground">Directement auprès de votre psychologue, au cabinet. Rien d'autre à faire d'ici là.</span></span>
+            <span><span id="p-surplace-titre" class="block font-medium">Payer le jour de la séance</span><span id="p-surplace-texte" class="block text-sm text-muted-foreground">Directement auprès de votre psychologue, au cabinet, en espèces ou par carte.</span></span>
+          </div>
+          <div id="p-virement" hidden class="flex items-center gap-5 rounded-2xl border border-border p-6">
+            <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-clay/15 text-ink"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18"/></svg></span>
+            <span><span class="block font-medium">Payer par virement bancaire</span><span id="p-virement-texte" class="block text-sm text-muted-foreground">Votre psychologue vous transmet ses coordonnées bancaires.</span></span>
           </div>
         </div>
         <button type="button" id="p-agenda" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary mb-12 gap-2 px-5 py-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ajouter à mon agenda</button>
 
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="rounded-xl bg-secondary p-5 ring-1 ring-border"><p class="mb-1 text-sm font-medium">Un empêchement ?</p><p class="text-xs leading-relaxed text-muted-foreground">Prévenez-nous au moins 48 h à l'avance à <a href="mailto:lespacecommunpsy@gmail.com" class="underline">lespacecommunpsy@gmail.com</a>. Au-delà, la séance peut être due.</p></div>
-          <div class="rounded-xl bg-secondary p-5 ring-1 ring-border"><p class="mb-1 text-sm font-medium">Pour votre mutuelle</p><p class="text-xs leading-relaxed text-muted-foreground">Vous recevez un reçu par email après un paiement en ligne, et votre psychologue vous remet une note d'honoraires.</p></div>
+          <div class="rounded-xl bg-secondary p-5 ring-1 ring-border"><p class="mb-1 text-sm font-medium">Pour votre mutuelle</p><p class="text-xs leading-relaxed text-muted-foreground">Votre psychologue, qui facture lui-même ses séances, vous remet une note d'honoraires.</p></div>
         </div>
-        <p class="mt-6 flex items-center gap-2 text-xs text-muted-foreground"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Vos coordonnées bancaires sont saisies chez notre prestataire de paiement certifié et ne transitent jamais par notre site.</p>
+        <p id="p-securite" hidden class="mt-6 flex items-center gap-2 text-xs text-muted-foreground"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Le paiement par carte se fait chez un prestataire certifié : vos coordonnées bancaires ne transitent jamais par notre site.</p>
       </div>
       <noscript><p class="rounded-xl bg-secondary p-6 text-sm">Activez JavaScript pour afficher votre rendez-vous, ou écrivez-nous à lespacecommunpsy@gmail.com.</p></noscript>
     </div>

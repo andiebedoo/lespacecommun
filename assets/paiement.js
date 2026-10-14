@@ -17,6 +17,8 @@ const TYPES = {
 
 const euros = (txt) => parseInt(txt, 10);
 const majuscule = (txt) => txt.charAt(0).toUpperCase() + txt.slice(1);
+// « auprès de Viva », mais « auprès d'Andie »
+const deNom = (nom) => (/^[aeiouyéèêh]/i.test(nom) ? `d'${nom}` : `de ${nom}`);
 
 function lireRdv(params) {
   const d = params.get('d') || '';
@@ -70,8 +72,10 @@ function texteRdv(rdv) {
   };
 }
 
-function lienStripe(rdv) {
-  const lien = paiement.liens[String(montant(rdv))];
+function rdvLienPsy(rdv) {
+  // Lien de paiement propre au psychologue (c'est lui qui facture), s'il en a un.
+  const liens = (rdv.p && psys[rdv.p].liens) || {};
+  const lien = liens[String(montant(rdv))];
   if (!lien) return '';
   const ref = `${rdv.d}_${rdv.h.replace(':', 'h')}_${rdv.p || 'reseau'}_${rdv.t}`;
   return `${lien}${lien.includes('?') ? '&' : '?'}client_reference_id=${encodeURIComponent(ref)}`;
@@ -124,24 +128,29 @@ if (document.getElementById('p-contenu')) {
     ecrire('p-adresse', t.adresse);
     ecrire('p-montant', t.montant);
 
+    // Le patient règle directement son psychologue :
+    // au cabinet en espèces ou par carte ; en visio par carte (lien du psychologue) ou virement.
+    const qui = rdv.p ? psys[rdv.p].nom : 'votre psychologue';
     const passe = rdv.debut < new Date();
-    const lien = lienStripe(rdv);
+    const lien = rdvLienPsy(rdv);
     const payer = document.getElementById('p-payer');
-    const surPlace = document.getElementById('p-surplace');
-    if (lien && !passe) {
-      payer.href = lien;
-      payer.hidden = false;
-      payer.addEventListener('click', () => memoriser(params));
-    }
     if (rdv.l === 'visio') {
-      ecrire('p-surplace-texte', lien
-        ? 'Pour une téléconsultation, merci de régler en ligne avant la séance.'
-        : 'Votre psychologue vous indique comment régler avant la séance.');
-      surPlace.querySelector('.font-medium').textContent = lien ? 'Règlement avant la visio' : 'Règlement de la téléconsultation';
-      surPlace.hidden = Boolean(lien);
+      if (lien && !passe) {
+        payer.href = lien;
+        payer.hidden = false;
+        payer.addEventListener('click', () => memoriser(params));
+        document.getElementById('p-securite').hidden = false;
+        ecrire('p-virement-texte', `${qui} vous transmet ses coordonnées bancaires sur simple demande.`);
+        document.getElementById('p-virement').hidden = false;
+      } else {
+        ecrire('p-surplace-titre', 'Régler votre téléconsultation');
+        ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, par carte ou par virement bancaire : ${qui} vous transmet ses coordonnées de paiement avant la séance.`);
+        document.getElementById('p-surplace').hidden = false;
+      }
     } else {
-      if (!lien) ecrire('p-surplace-texte', 'Vous réglez en espèces, directement auprès de votre psychologue, le jour de la séance. Rien d\'autre à faire d\'ici là.');
-      surPlace.hidden = false;
+      ecrire('p-surplace-titre', 'Payer le jour de la séance');
+      ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, au cabinet, en espèces ou par carte. Rien d'autre à faire d'ici là.`);
+      document.getElementById('p-surplace').hidden = false;
     }
     document.getElementById('p-agenda').addEventListener('click', () => fichierAgenda(rdv));
     document.getElementById('p-contenu').hidden = false;
@@ -162,4 +171,4 @@ if (document.getElementById('m-rappel')) {
   }
 }
 
-window.ECPaiement = { lireRdv, montant, texteRdv, lienStripe, TYPES };
+window.ECPaiement = { lireRdv, montant, texteRdv, rdvLienPsy, deNom, TYPES };
