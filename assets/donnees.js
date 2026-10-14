@@ -96,6 +96,11 @@ window.EC = {
    "lien": "approches/icv.html",
    "type": "approche"
   },
+  "therapie-breve": {
+   "libelle": "Thérapie brève",
+   "lien": "approches/therapie-breve.html",
+   "type": "approche"
+  },
   "systemique": {
    "libelle": "Systémique",
    "lien": "approches/systemique.html",

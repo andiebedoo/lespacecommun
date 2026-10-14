@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thérapie brève — L&#x27;Espace Commun, centre de psychologie</title>
+  <meta name="description" content="Un accompagnement court et concret, centré sur votre objectif et sur les solutions, plutôt que sur l&#x27;origine du problème." />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Fraunces", ui-serif, Georgia, serif;
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-sage: var(--sage);
+      --color-sage-foreground: var(--sage-foreground);
+      --color-clay: var(--clay);
+      --color-ink: var(--ink);
+      --color-ink-foreground: var(--ink-foreground);
+      --color-canvas: var(--canvas);
+    }
+    :root {
+      --background: oklch(97.3% .005 95.1);
+      --foreground: oklch(21% .006 285.9);
+      --secondary: oklch(96.7% .001 286.4);
+      --secondary-foreground: oklch(33.5% .019 169.7);
+      --muted-foreground: oklch(55.2% .014 285.9);
+      --border: oklch(92% .004 286.3);
+      --input: oklch(92% .004 286.3);
+      --ring: oklch(33.5% .019 169.7);
+      --sage: oklch(33.5% .019 169.7);
+      --sage-foreground: oklch(97.3% .005 95.1);
+      --clay: oklch(73.2% .06 59.8);
+      --ink: oklch(28.3% .039 249.3);
+      --ink-foreground: oklch(97.3% .005 95.1);
+      --canvas: oklch(97.3% .005 95.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--background); color: var(--foreground); }
+    h1, h2, h3 { overflow-wrap: break-word; }
+    * { border-color: var(--border); }
+    .prose-ec p { margin-bottom: 1rem; line-height: 1.75; color: var(--muted-foreground); }
+    .prose-ec ul { margin: 0 0 1rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+    .prose-ec li { margin-bottom: .5rem; line-height: 1.7; }
+    .prose-ec li::marker { color: var(--clay); }
+    .prose-ec strong { color: var(--foreground); font-weight: 500; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<div class="min-h-screen bg-canvas font-sans text-foreground selection:bg-clay/20">
+
+  <div class="bg-ink px-6 py-3 text-ink-foreground">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
+      <p class="text-pretty text-sm font-medium">Une situation de crise ? Nos créneaux d'urgence sont disponibles sous 24h.</p>
+      <a href="../rdv.html?motif=urgence" class="text-sm font-semibold underline decoration-ink-foreground/40 underline-offset-4 transition-colors hover:decoration-ink-foreground">Demander un créneau d'urgence</a>
+    </div>
+  </div>
+  <nav class="sticky top-0 z-50 border-b border-border bg-canvas/85 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+      <div class="flex items-center gap-8">
+        <a href="../index.html" class="flex items-center gap-3 whitespace-nowrap font-serif text-base font-medium tracking-tight text-sage min-[360px]:text-lg sm:text-xl">
+          <img src="../images/favicon.png" alt="" width="36" height="36" class="hidden size-9 rounded-full ring-1 ring-border sm:block">L'Espace Commun</a>
+        <div class="hidden items-center gap-5 xl:flex">
+          
+        <div class="group relative">
+          <a href="../troubles/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Motifs de consultation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../troubles/depression-anxiete.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Dépression &amp; anxiété</a><a href="../troubles/tca.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="../troubles/tsa.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="../troubles/tdah.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="../troubles/confiance-en-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Confiance en soi</a><a href="../troubles/travail-sur-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Démarrer un travail sur soi</a><a href="../troubles/addictions.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Addictions</a><a href="../troubles/perinatalite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Périnatalité</a><a href="../troubles/obesite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Obésité</a><a href="../troubles/maladies-chroniques.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Maladies chroniques</a><a href="../troubles/souffrance-au-travail.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Burn-out &amp; travail</a>
+            <a href="../troubles/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les motifs de consultation</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="../approches/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Approches
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../approches/tcc.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">TCC</a><a href="../approches/psychanalyse.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Psychanalyse</a><a href="../approches/emdr.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">EMDR</a><a href="../approches/hypnotherapie.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Hypnothérapie</a><a href="../approches/icv.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Intégration du Cycle de la Vie (ICV)</a><a href="../approches/therapie-breve.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Thérapie brève</a><a href="../approches/systemique.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Systémique</a>
+            <a href="../approches/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Comprendre les approches</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="../bilans/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Bilans
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../bilans/wisc-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WISC-V · enfant</a><a href="../bilans/wais-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WAIS-V · adulte</a><a href="../bilans/bilans-projectifs.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Bilans projectifs</a>
+            <a href="../bilans/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les bilans</a>
+          </div>
+        </div>
+          <a href="../equipe.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">L'équipe</a>
+          <a href="../infos.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Infos &amp; tarifs</a>
+          <a href="../blog/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Blog</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="../rdv.html" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 shrink-0 whitespace-nowrap px-3 sm:px-4"><span class="hidden sm:inline">Prendre rendez-vous</span><span class="hidden min-[360px]:inline sm:hidden">Rendez-vous</span><span class="min-[360px]:hidden">RDV</span></a>
+        <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" class="-mr-2 rounded-md p-2 text-sage transition-colors hover:bg-secondary xl:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path class="icon-open" d="M4 7h16M4 12h16M4 17h16"/><path class="icon-close hidden" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu-mobile" class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-canvas px-4 py-2 sm:px-6 xl:hidden">
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Motifs de consultation
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../troubles/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../troubles/depression-anxiete.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a><a href="../troubles/tca.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="../troubles/tsa.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="../troubles/tdah.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="../troubles/confiance-en-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Confiance en soi</a><a href="../troubles/travail-sur-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a><a href="../troubles/addictions.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Addictions</a><a href="../troubles/perinatalite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Périnatalité</a><a href="../troubles/obesite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Obésité</a><a href="../troubles/maladies-chroniques.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a><a href="../troubles/souffrance-au-travail.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Approches
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../approches/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../approches/tcc.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">TCC</a><a href="../approches/psychanalyse.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Psychanalyse</a><a href="../approches/emdr.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">EMDR</a><a href="../approches/hypnotherapie.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a><a href="../approches/icv.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Intégration du Cycle de la Vie (ICV)</a><a href="../approches/therapie-breve.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Thérapie brève</a><a href="../approches/systemique.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Systémique</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Bilans
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../bilans/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../bilans/wisc-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a><a href="../bilans/wais-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a><a href="../bilans/bilans-projectifs.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></div>
+      </details>
+      <a href="../equipe.html" class="block border-b border-border py-3 text-base">L'équipe</a>
+      <a href="../infos.html" class="block border-b border-border py-3 text-base">Infos &amp; tarifs</a>
+      <a href="../blog/index.html" class="block border-b border-border py-3 text-base">Blog</a>
+      <a href="../rdv.html" class="mt-4 mb-2 flex inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre rendez-vous</a>
+    </div>
+  </nav>
+<main>
+
+  <header class="px-6 pt-10 pb-12 md:pt-14 md:pb-16">
+    <div class="mx-auto max-w-6xl">
+      <nav aria-label="Fil d'Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-xs text-muted-foreground"><a href="../index.html" class="hover:text-sage">Accueil</a><span aria-hidden="true" class="text-border">/</span><a href="../approches/index.html" class="hover:text-sage">Approches</a><span aria-hidden="true" class="text-border">/</span><span class="text-foreground">Thérapie brève</span></nav>
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_22rem] lg:gap-16">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-clay">Approche thérapeutique</p>
+          <h1 class="mb-6 text-balance font-serif text-4xl leading-tight text-sage md:text-5xl">Thérapie brève</h1>
+          
+          
+          <p class="mb-8 max-w-[60ch] text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">Et si l&#x27;on cherchait moins « pourquoi » le problème existe, et davantage « comment » il se maintient et ce qui fonctionne déjà ? La thérapie brève propose un travail limité dans le temps, tourné vers un objectif précis et vers vos propres ressources.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="../rdv.html?motif=therapie-breve" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 gap-2 px-5 py-3">Prendre rendez-vous <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#aide" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-5 py-3">Comment on vous aide</a>
+          </div>
+        </div>
+        <div class="self-start rounded-2xl bg-secondary p-6 ring-1 ring-border md:p-8">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">En bref</p>
+          <ul class="space-y-4 text-sm leading-relaxed text-foreground/85"><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-clay"></span><span>Un nombre de séances limité, souvent une dizaine, fixé autour d&#x27;un objectif clair.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-clay"></span><span>Deux grands courants : la thérapie brève stratégique (Palo Alto) et la thérapie brève orientée solutions.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-clay"></span><span>On s&#x27;intéresse au présent et à l&#x27;avenir : ce que vous voulez voir changer, et comment y arriver.</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="border-t border-border px-6 py-14 md:py-20">
+    <div class="mx-auto grid grid-cols-1 max-w-6xl gap-12 lg:grid-cols-[1fr_18rem] lg:gap-16">
+      <article class="min-w-0 space-y-16">
+          <section id="s0" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Le principe</h2>
+            <div class="prose-ec max-w-[68ch]">
+<p>La thérapie brève part d'une idée simple : pour changer, il n'est pas toujours nécessaire de comprendre toutes les causes d'une difficulté. Ce qui compte, c'est ce qui l'entretient aujourd'hui et ce qui permettrait d'en sortir. Le thérapeute vous aide à définir un objectif concret (« dormir sans angoisse », « retrouver le goût d'aller au travail », « apaiser les disputes à la maison ») et à avancer pas à pas vers lui.</p>
+<p>Elle est dite « brève » parce que le travail est pensé dès le départ pour durer peu de temps : on fait régulièrement le point sur les progrès, et l'on s'arrête quand l'objectif est atteint.</p>
+</div>
+          </section>
+          <section id="s1" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Deux grands courants</h2>
+            <div class="prose-ec max-w-[68ch]">
+<ul>
+<li><strong>La thérapie brève stratégique</strong>, née à la fin des années 1960 au Brief Therapy Center du Mental Research Institute de Palo Alto, en Californie, autour de Paul Watzlawick, John Weakland et Richard Fisch. Leur idée clé : ce sont souvent les solutions que l'on essaie pour régler un problème qui finissent par l'entretenir. On cherche alors à interrompre ce cercle vicieux, parfois avec des propositions inattendues.</li>
+<li><strong>La thérapie brève orientée solutions</strong>, développée à partir de la fin des années 1970 à Milwaukee par Steve de Shazer et Insoo Kim Berg. Plutôt que d'analyser le problème, on s'intéresse aux moments où il est moins présent, à ce qui marche déjà, et à la vie que vous souhaitez une fois la difficulté réglée.</li>
+</ul>
+</div>
+          </section>
+          <section id="s2" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Ce que dit la recherche</h2>
+            <div class="prose-ec max-w-[68ch]">
+<p>En 2013, une revue de la littérature publiée dans la revue <em>Research on Social Work Practice</em> a rassemblé 43 études contrôlées sur la thérapie brève orientée solutions : environ trois sur quatre montraient un bénéfice significatif, et les résultats les plus nets concernaient la dépression de l'adulte, avec une efficacité comparable à celle d'autres traitements reconnus, souvent en moins de séances. Des spécialistes ont toutefois souligné que la qualité de ces études était très variable : ces résultats sont encourageants, mais doivent être confirmés.</p>
+</div>
+          </section>
+          <section id="pour-qui" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Pour quelles difficultés ?</h2>
+            <ul class="flex flex-wrap gap-2"><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Anxiété, stress</li><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Difficultés relationnelles ou familiales</li><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Problèmes au travail, burn-out</li><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Confiance en soi</li><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Situations de crise ou de transition</li><li class="rounded-full bg-secondary px-4 py-2 text-sm text-secondary-foreground ring-1 ring-border">Enfants, adolescents et adultes</li></ul>
+          </section>
+          <section id="deroule" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Comment se passe une thérapie ?</h2>
+            <ol class="grid gap-3 md:grid-cols-2">
+              <li class="relative rounded-xl border border-border bg-canvas p-5 pl-16">
+                <span class="absolute top-5 left-5 flex size-8 items-center justify-center rounded-full bg-sage font-serif text-sm text-sage-foreground">1</span>
+                <p class="mb-1 font-medium text-foreground">Définir l&#x27;objectif</p>
+                <p class="text-sm leading-relaxed text-muted-foreground">On précise ce que vous voulez voir changer, de façon concrète et réaliste.</p>
+              </li>
+              <li class="relative rounded-xl border border-border bg-canvas p-5 pl-16">
+                <span class="absolute top-5 left-5 flex size-8 items-center justify-center rounded-full bg-sage font-serif text-sm text-sage-foreground">2</span>
+                <p class="mb-1 font-medium text-foreground">Explorer ce qui marche</p>
+                <p class="text-sm leading-relaxed text-muted-foreground">On repère vos ressources, les moments où la difficulté est moins forte, et ce que vous avez déjà essayé.</p>
+              </li>
+              <li class="relative rounded-xl border border-border bg-canvas p-5 pl-16">
+                <span class="absolute top-5 left-5 flex size-8 items-center justify-center rounded-full bg-sage font-serif text-sm text-sage-foreground">3</span>
+                <p class="mb-1 font-medium text-foreground">Expérimenter</p>
+                <p class="text-sm leading-relaxed text-muted-foreground">Le thérapeute vous propose de petits changements ou des tâches à tester entre les séances.</p>
+              </li>
+              <li class="relative rounded-xl border border-border bg-canvas p-5 pl-16">
+                <span class="absolute top-5 left-5 flex size-8 items-center justify-center rounded-full bg-sage font-serif text-sm text-sage-foreground">4</span>
+                <p class="mb-1 font-medium text-foreground">Faire le point</p>
+                <p class="text-sm leading-relaxed text-muted-foreground">À chaque séance, on mesure les progrès (par exemple sur une échelle de 0 à 10) et l&#x27;on décide ensemble de la suite.</p>
+              </li></ol>
+          </section>
+          <section id="idees" class="scroll-mt-28 rounded-3xl bg-sage px-6 pt-8 pb-2 text-sage-foreground md:px-10 md:pt-10">
+            <h2 class="mb-6 font-serif text-2xl md:text-3xl">Vrai ou faux ?</h2>
+              <div class="grid gap-3 border-t border-sage-foreground/15 py-6 md:grid-cols-2 md:gap-10">
+                <p class="font-serif text-lg italic text-sage-foreground"><span class="mr-2 not-italic text-xs font-semibold uppercase tracking-widest text-clay">Idée reçue</span>« Une thérapie courte est forcément superficielle. »</p>
+                <p class="text-sm leading-relaxed text-sage-foreground/80"><span class="mb-1 block text-xs font-semibold uppercase tracking-widest text-sage-foreground/50">En réalité</span>Un objectif précis et un travail ciblé peuvent produire des changements durables, en peu de séances.</p>
+              </div>
+              <div class="grid gap-3 border-t border-sage-foreground/15 py-6 md:grid-cols-2 md:gap-10">
+                <p class="font-serif text-lg italic text-sage-foreground"><span class="mr-2 not-italic text-xs font-semibold uppercase tracking-widest text-clay">Idée reçue</span>« On ne parle jamais du passé. »</p>
+                <p class="text-sm leading-relaxed text-sage-foreground/80"><span class="mb-1 block text-xs font-semibold uppercase tracking-widest text-sage-foreground/50">En réalité</span>Le passé n&#x27;est pas exclu, mais l&#x27;accent est mis sur ce qui entretient la difficulté aujourd&#x27;hui et sur la suite.</p>
+              </div>
+              <div class="grid gap-3 border-t border-sage-foreground/15 py-6 md:grid-cols-2 md:gap-10">
+                <p class="font-serif text-lg italic text-sage-foreground"><span class="mr-2 not-italic text-xs font-semibold uppercase tracking-widest text-clay">Idée reçue</span>« Le thérapeute donne des recettes toutes faites. »</p>
+                <p class="text-sm leading-relaxed text-sage-foreground/80"><span class="mb-1 block text-xs font-semibold uppercase tracking-widest text-sage-foreground/50">En réalité</span>Les propositions sont construites avec vous, à partir de votre situation et de vos propres ressources.</p>
+              </div>
+          </section>
+          <section id="lexique" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Les mots du psy, en clair</h2>
+            <dl class="grid gap-x-10 sm:grid-cols-2"><div class="border-b border-border py-4"><dt class="mb-1 font-medium text-sage">Objectif thérapeutique</dt><dd class="text-sm leading-relaxed text-muted-foreground">Le changement concret que l&#x27;on vise ensemble.</dd></div><div class="border-b border-border py-4"><dt class="mb-1 font-medium text-sage">Question miracle</dt><dd class="text-sm leading-relaxed text-muted-foreground">Imaginer qu&#x27;en se réveillant demain le problème a disparu : qu&#x27;est-ce qui serait différent ?</dd></div><div class="border-b border-border py-4"><dt class="mb-1 font-medium text-sage">Échelle</dt><dd class="text-sm leading-relaxed text-muted-foreground">Évaluer de 0 à 10 où l&#x27;on en est, pour mesurer les progrès.</dd></div></dl>
+          </section>
+          <section id="faq" class="scroll-mt-28">
+            <h2 class="mb-6 text-balance font-serif text-2xl text-sage md:text-3xl">Questions fréquentes</h2>
+            <div class="border-t border-border">
+              <details class="group border-b border-border py-5">
+                <summary class="flex items-start justify-between gap-6 font-medium text-foreground">Combien de séances faut-il ?
+                  <svg class="chevron mt-1 shrink-0 text-clay transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                <p class="mt-3 max-w-[68ch] text-sm leading-relaxed text-muted-foreground">Le plus souvent entre quelques séances et une dizaine. On fait régulièrement le point, et vous restez libre d&#x27;arrêter quand l&#x27;objectif est atteint.</p>
+              </details>
+              <details class="group border-b border-border py-5">
+                <summary class="flex items-start justify-between gap-6 font-medium text-foreground">En quoi est-ce différent des TCC ?
+                  <svg class="chevron mt-1 shrink-0 text-clay transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                <p class="mt-3 max-w-[68ch] text-sm leading-relaxed text-muted-foreground">Les deux sont actives et centrées sur le présent. Les TCC travaillent beaucoup sur les pensées et les comportements ; la thérapie brève s&#x27;intéresse surtout aux interactions, aux solutions déjà essayées et aux ressources.</p>
+              </details></div>
+          </section>
+      </article>
+      <aside class="order-first min-w-0 lg:order-none">
+        <div class="space-y-6 lg:sticky lg:top-28">
+          <nav aria-label="Sommaire" class="hidden lg:block">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Sur cette page</p>
+            <ul><li><a href="#s0" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Le principe</a></li><li><a href="#s1" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Deux grands courants</a></li><li><a href="#s2" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Ce que dit la recherche</a></li><li><a href="#pour-qui" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Pour quelles difficultés ?</a></li><li><a href="#deroule" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Comment se passe une thérapie ?</a></li><li><a href="#idees" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Idées reçues</a></li><li><a href="#lexique" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Les mots du psy, en clair</a></li><li><a href="#faq" class="block border-l border-border py-1.5 pl-4 text-sm text-muted-foreground transition-colors hover:border-sage hover:text-sage">Questions fréquentes</a></li></ul>
+          </nav>
+          <div class="rounded-2xl border border-border bg-secondary/60 p-5">
+            <p class="text-sm leading-relaxed text-muted-foreground">Dites-nous ce qui vous amène : nous vous orientons vers le psychologue du réseau le plus adapté.</p>
+            <a href="../rdv.html?motif=therapie-breve" class="mt-4 flex w-full inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre rendez-vous</a>
+          </div>
+          
+        </div>
+      </aside>
+    </div>
+  </div>
+  <section class="border-t border-border px-6 py-12">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">À lire aussi</p>
+      <div class="flex flex-wrap gap-2"><a href="../approches/tcc.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">TCC</a><a href="../approches/psychanalyse.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">Psychanalyse</a><a href="../approches/emdr.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">EMDR</a><a href="../approches/hypnotherapie.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">Hypnothérapie</a><a href="../approches/icv.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">Intégration du Cycle de la Vie (ICV)</a><a href="../approches/systemique.html" class="rounded-full px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-sage">Systémique</a></div>
+      
+    </div>
+  </section>
+  
+  <section class="px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-sage px-8 py-12 text-sage-foreground md:px-14 md:py-16">
+      <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <div class="max-w-[48ch]">
+          <h2 class="mb-4 text-balance font-serif text-3xl md:text-4xl">Envie d'en parler ?</h2>
+          <p class="text-pretty text-sage-foreground/75">Nous vous orientons vers le psychologue le plus adapté à votre demande, dans l'un des cabinets du réseau en Île-de-France, ou en téléconsultation.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="../rdv.html?motif=therapie-breve" class="inline-flex items-center gap-2 rounded-md bg-canvas px-5 py-3 text-sm font-medium text-sage transition-colors hover:bg-canvas/90">Prendre rendez-vous <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="../equipe.html" class="inline-flex items-center rounded-md px-5 py-3 text-sm font-medium text-sage-foreground ring-1 ring-sage-foreground/30 transition-colors hover:bg-sage-foreground/10">Voir l'équipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="border-t border-border bg-secondary/50 px-6 pt-16 pb-10">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <div class="mb-3 font-serif text-2xl text-sage">L'Espace Commun</div>
+          <p class="mb-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">Centre de psychologie</p>
+          <p class="mb-6 font-serif text-sm italic text-clay">Écoute · Bienveillance · Alliance</p>
+          <p class="text-sm leading-relaxed text-muted-foreground">Réseau de psychologues en Île-de-France (75 · 92 · 93 · 94…)<br>Centres : 133 bd Voltaire, 75011 Paris · 1 rue de Benfleet, 93230 Romainville<br>Téléconsultation partout en France</p>
+          <a href="mailto:lespacecommunpsy@gmail.com" class="mt-4 inline-block text-sm text-sage underline underline-offset-4">lespacecommunpsy@gmail.com</a>
+          <a href="../rejoindre.html" class="mt-3 flex w-fit items-center gap-2 text-sm font-medium text-sage">Vous êtes psychologue ? Rejoignez le réseau <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Motifs de consultation</p>
+          <ul class="space-y-2"><li><a href="../troubles/depression-anxiete.html" class="text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a></li><li><a href="../troubles/tca.html" class="text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a></li><li><a href="../troubles/tsa.html" class="text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a></li><li><a href="../troubles/tdah.html" class="text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a></li><li><a href="../troubles/confiance-en-soi.html" class="text-sm text-muted-foreground hover:text-sage">Confiance en soi</a></li><li><a href="../troubles/travail-sur-soi.html" class="text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a></li><li><a href="../troubles/addictions.html" class="text-sm text-muted-foreground hover:text-sage">Addictions</a></li><li><a href="../troubles/perinatalite.html" class="text-sm text-muted-foreground hover:text-sage">Périnatalité</a></li><li><a href="../troubles/obesite.html" class="text-sm text-muted-foreground hover:text-sage">Obésité</a></li><li><a href="../troubles/maladies-chroniques.html" class="text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a></li><li><a href="../troubles/souffrance-au-travail.html" class="text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Approches</p>
+          <ul class="space-y-2"><li><a href="../approches/tcc.html" class="text-sm text-muted-foreground hover:text-sage">TCC</a></li><li><a href="../approches/psychanalyse.html" class="text-sm text-muted-foreground hover:text-sage">Psychanalyse</a></li><li><a href="../approches/emdr.html" class="text-sm text-muted-foreground hover:text-sage">EMDR</a></li><li><a href="../approches/hypnotherapie.html" class="text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a></li><li><a href="../approches/icv.html" class="text-sm text-muted-foreground hover:text-sage">Intégration du Cycle de la Vie (ICV)</a></li><li><a href="../approches/therapie-breve.html" class="text-sm text-muted-foreground hover:text-sage">Thérapie brève</a></li><li><a href="../approches/systemique.html" class="text-sm text-muted-foreground hover:text-sage">Systémique</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Bilans</p>
+          <ul class="space-y-2"><li><a href="../bilans/wisc-v.html" class="text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a></li><li><a href="../bilans/wais-v.html" class="text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a></li><li><a href="../bilans/bilans-projectifs.html" class="text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></li></ul>
+        </div>
+      </div>
+      <div class="mt-12 rounded-xl border border-border bg-canvas p-5 text-sm leading-relaxed text-muted-foreground">
+        <strong class="font-medium text-foreground">En cas d'urgence vitale</strong>, appelez le <strong class="text-foreground">15</strong> ou le <strong class="text-foreground">112</strong>. Si vous avez des idées suicidaires ou êtes inquiet pour un proche : <strong class="text-foreground">3114</strong>, numéro national de prévention du suicide, gratuit, 24h/24.
+      </div>
+      <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row">
+        <span>© <span data-annee>2026</span> L'Espace Commun</span>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="../infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><button type="button" data-gerer-cookies class="uppercase tracking-wider hover:text-sage">Cookies</button><a href="../equipe.html" class="hover:text-sage">L'équipe</a><a href="../rdv.html" class="hover:text-sage">Rendez-vous</a><a href="../blog/index.html" class="hover:text-sage">Blog</a><a href="../rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div id="bandeau-cookies" hidden role="dialog" aria-label="Mesure d'audience" class="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-xl rounded-2xl border border-border bg-canvas p-5 shadow-2xl sm:inset-x-6 sm:bottom-6">
+  <p class="mb-1 font-serif text-lg text-sage">Votre accord pour mesurer l'audience</p>
+  <p class="mb-4 text-xs leading-relaxed text-muted-foreground">Avec votre accord, nous utilisons Google Analytics pour savoir combien de personnes consultent le site et quelles pages sont utiles. Aucune donnée n'est utilisée à des fins publicitaires. Vous pouvez changer d'avis à tout moment via « Cookies » en bas de page. <a href="../infos.html#confidentialite" class="underline">En savoir plus</a></p>
+  <div class="grid grid-cols-2 gap-2">
+    <button type="button" data-cookies="non" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary py-2.5">Refuser</button>
+    <button type="button" data-cookies="oui" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 py-2.5">Accepter</button>
+  </div>
+</div>
+<script src="../assets/site.js"></script>
+<script src="../assets/mesure.js" data-ga="G-H59D9KR0ZG"></script>
+</body>
+</html>
