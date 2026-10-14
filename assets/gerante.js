@@ -38,11 +38,11 @@ function mettreAJour() {
     reglement = `Le règlement se fait directement auprès ${deNom(qui)}, le jour de la séance, au cabinet : en espèces ou par carte.`;
     alerte.textContent = 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
   } else if (enLigne) {
-    reglement = `Le règlement se fait directement auprès ${deNom(qui)} : par carte via le lien de paiement sécurisé de la page ci-dessous, ou par virement bancaire.`;
-    alerte.textContent = 'Téléconsultation : paiement par carte (lien du psychologue) ou par virement.';
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte, via le lien de paiement sécurisé de la page ci-dessous.`;
+    alerte.textContent = 'Téléconsultation : paiement par carte via le lien du psychologue.';
   } else {
-    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte ou par virement bancaire : ses coordonnées de paiement vous seront transmises avant la séance.`;
-    alerte.textContent = 'Téléconsultation : ce psychologue n\'a pas de lien de paiement sur le site. Pensez à transmettre au patient son lien de paiement ou son RIB.';
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte : le lien de paiement sécurisé vous sera transmis avant la séance.`;
+    alerte.textContent = 'Téléconsultation : ce psychologue n\'a pas de lien de paiement sur le site. Pensez à transmettre au patient son lien de paiement.';
   }
   document.getElementById('g-montant').textContent = `${montant(rdv)} €`;
   document.getElementById('g-lien').value = url;

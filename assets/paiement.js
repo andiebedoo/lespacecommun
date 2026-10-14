@@ -131,7 +131,7 @@ if (document.getElementById('p-contenu')) {
     ecrire('p-montant', t.montant);
 
     // Le patient règle directement son psychologue :
-    // au cabinet en espèces ou par carte ; en visio par carte (lien du psychologue) ou virement.
+    // au cabinet en espèces ou par carte ; en visio par carte, via un lien de paiement.
     const qui = rdv.p ? psys[rdv.p].nom : 'votre psychologue';
     const passe = rdv.debut < new Date();
     const lien = rdvLienPsy(rdv);
@@ -142,11 +142,9 @@ if (document.getElementById('p-contenu')) {
         payer.hidden = false;
         payer.addEventListener('click', () => memoriser(params));
         document.getElementById('p-securite').hidden = false;
-        ecrire('p-virement-texte', `${qui} vous transmet ses coordonnées bancaires sur simple demande.`);
-        document.getElementById('p-virement').hidden = false;
       } else {
         ecrire('p-surplace-titre', 'Régler votre téléconsultation');
-        ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, par carte ou par virement bancaire : ${qui} vous transmet ses coordonnées de paiement avant la séance.`);
+        ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, par carte : le lien de paiement sécurisé vous est transmis avant la séance.`);
         document.getElementById('p-surplace').hidden = false;
       }
     } else {
