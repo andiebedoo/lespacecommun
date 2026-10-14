@@ -91,6 +91,11 @@ window.EC = {
    "lien": "approches/hypnotherapie.html",
    "type": "approche"
   },
+  "icv": {
+   "libelle": "Intégration du Cycle de la Vie (ICV)",
+   "lien": "approches/icv.html",
+   "type": "approche"
+  },
   "systemique": {
    "libelle": "Systémique",
    "lien": "approches/systemique.html",
