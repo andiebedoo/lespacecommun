@@ -113,13 +113,10 @@ window.EC = {
   "andie": {
    "nom": "Andie Bedoucha",
    "liens": {
-    "95": "https://buy.stripe.com/3cIfZh6db2pW5kndwccjS04",
-    "120": "https://buy.stripe.com/dRmeVddFDd4A5kn77OcjS08",
-    "100": "https://buy.stripe.com/eVq7sL8lj5C828bgIocjS03",
-    "350": "https://buy.stripe.com/4gMfZh8lj8OkeUXbo4cjS01",
-    "76": "https://buy.stripe.com/eVq7sLfNLd4A6ordwccjS05",
-    "96": "https://buy.stripe.com/7sYcN56db2pWcMPbo4cjS07",
-    "80": "https://buy.stripe.com/9B6cN59pnaWs003ak0cjS09"
+    "95": "https://checkout.revolut.com/pay/fcf0bd7e-d66f-4667-9dce-20e3c846b4b4",
+    "120": "https://checkout.revolut.com/pay/4b23b6ac-7ac6-4453-864f-8101076405cd",
+    "76": "https://checkout.revolut.com/pay/02320a61-fca5-42cd-bed9-ed5383aeb5d4",
+    "96": "https://checkout.revolut.com/pay/68341e16-4123-44ed-9dc4-5f099d680817"
    },
    "slugs": [
     "confiance-en-soi",

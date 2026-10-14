@@ -77,6 +77,8 @@ function rdvLienPsy(rdv) {
   const liens = (rdv.p && psys[rdv.p].liens) || {};
   const lien = liens[String(montant(rdv))];
   if (!lien) return '';
+  // Référence du RDV : seulement comprise par les liens Stripe.
+  if (!lien.includes('stripe.com')) return lien;
   const ref = `${rdv.d}_${rdv.h.replace(':', 'h')}_${rdv.p || 'reseau'}_${rdv.t}`;
   return `${lien}${lien.includes('?') ? '&' : '?'}client_reference_id=${encodeURIComponent(ref)}`;
 }
