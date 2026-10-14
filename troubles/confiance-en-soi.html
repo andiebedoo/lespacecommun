@@ -327,11 +327,20 @@
       </div>
       <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row">
         <span>© <span data-annee>2026</span> L'Espace Commun</span>
-        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="../infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><a href="../equipe.html" class="hover:text-sage">L'équipe</a><a href="../rdv.html" class="hover:text-sage">Rendez-vous</a><a href="../blog/index.html" class="hover:text-sage">Blog</a><a href="../rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="../infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><button type="button" data-gerer-cookies class="uppercase tracking-wider hover:text-sage">Cookies</button><a href="../equipe.html" class="hover:text-sage">L'équipe</a><a href="../rdv.html" class="hover:text-sage">Rendez-vous</a><a href="../blog/index.html" class="hover:text-sage">Blog</a><a href="../rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
       </div>
     </div>
   </footer>
 </div>
+<div id="bandeau-cookies" hidden role="dialog" aria-label="Mesure d'audience" class="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-xl rounded-2xl border border-border bg-canvas p-5 shadow-2xl sm:inset-x-6 sm:bottom-6">
+  <p class="mb-1 font-serif text-lg text-sage">Votre accord pour mesurer l'audience</p>
+  <p class="mb-4 text-xs leading-relaxed text-muted-foreground">Avec votre accord, nous utilisons Google Analytics pour savoir combien de personnes consultent le site et quelles pages sont utiles. Aucune donnée n'est utilisée à des fins publicitaires. Vous pouvez changer d'avis à tout moment via « Cookies » en bas de page. <a href="../infos.html#confidentialite" class="underline">En savoir plus</a></p>
+  <div class="grid grid-cols-2 gap-2">
+    <button type="button" data-cookies="non" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary py-2.5">Refuser</button>
+    <button type="button" data-cookies="oui" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 py-2.5">Accepter</button>
+  </div>
+</div>
 <script src="../assets/site.js"></script>
+<script src="../assets/mesure.js" data-ga="G-H59D9KR0ZG"></script>
 </body>
 </html>
