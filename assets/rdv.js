@@ -171,6 +171,7 @@ form.addEventListener('submit', async (ev) => {
   if (!$('champ-motif').value) manque = 'Choisissez un motif de consultation.';
   else if (!valeurRadio('lieu')) manque = 'Choisissez un lieu : Paris 11, Romainville ou téléconsultation.';
   else if (!urgence && (!jourChoisi || heureChoisie === null)) manque = 'Choisissez un jour et un horaire.';
+  else if (!$('champ-tel').value.trim() && !$('champ-email').value.trim()) manque = 'Indiquez votre numéro de mobile et/ou votre email : c\'est là que vous recevrez la confirmation du rendez-vous.';
   else if (!form.checkValidity()) manque = 'Complétez vos coordonnées et acceptez d\'être recontacté.';
   if (manque) {
     alerte.textContent = manque;

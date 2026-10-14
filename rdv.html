@@ -144,7 +144,11 @@
     <div class="mx-auto max-w-6xl">
       <nav aria-label="Fil d'Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-xs text-muted-foreground"><a href="index.html" class="hover:text-sage">Accueil</a><span aria-hidden="true" class="text-border">/</span><span class="text-foreground">Prendre rendez-vous</span></nav>
       <h1 class="mb-4 font-serif text-4xl leading-tight text-sage md:text-5xl">Prendre rendez-vous en ligne</h1>
-      <p class="max-w-[62ch] text-muted-foreground md:text-lg">Choisissez votre motif, votre psychologue, le lieu et le créneau qui vous conviennent. Ensuite, Andie, gérante du centre, vous appelle pour comprendre votre demande, vous guider vers le psychologue le plus adapté et confirmer le rendez-vous.</p>
+      <p class="max-w-[62ch] text-muted-foreground md:text-lg">Choisissez votre motif, votre psychologue, le lieu et le créneau qui vous conviennent. Ensuite, Andie, gérante du centre, vous appelle pour comprendre votre demande et vous guider vers le psychologue le plus adapté.</p>
+      <div class="mt-6 flex gap-3 rounded-xl border border-clay/30 bg-clay/10 p-4 text-sm leading-relaxed text-ink md:max-w-[62ch]">
+        <svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        <p><strong class="font-medium">Votre demande n'est pas encore un rendez-vous confirmé.</strong> Le rendez-vous n'est confirmé qu'après validation par le psychologue : vous recevrez alors un <strong class="font-medium">SMS et/ou un email de confirmation</strong>. Pensez à indiquer un numéro de mobile et/ou une adresse email valides.</p>
+      </div>
     </div>
   </header>
   <section class="px-6 pb-20">
@@ -212,8 +216,9 @@
           <legend class="contents"><h2 class="mb-5 flex items-center gap-3 font-serif text-xl text-sage"><span class="flex size-8 items-center justify-center rounded-full bg-sage text-sm text-sage-foreground">5</span>Vos coordonnées</h2></legend>
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="flex flex-col gap-2 text-sm text-muted-foreground">Prénom et nom<input type="text" name="nom" autocomplete="name" required class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
-            <label class="flex flex-col gap-2 text-sm text-muted-foreground">Téléphone<input type="tel" name="telephone" autocomplete="tel" required class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
-            <label class="flex flex-col gap-2 text-sm text-muted-foreground sm:col-span-2">Email<input type="email" name="email" autocomplete="email" required class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
+            <label class="flex flex-col gap-2 text-sm text-muted-foreground">Téléphone mobile<input type="tel" name="telephone" id="champ-tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
+            <label class="flex flex-col gap-2 text-sm text-muted-foreground sm:col-span-2">Email<input type="email" name="email" id="champ-email" autocomplete="email" placeholder="vous@exemple.fr" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
+            <p class="-mt-2 text-xs leading-relaxed text-muted-foreground sm:col-span-2">Indiquez au moins un des deux : c'est là que vous recevrez la <strong class="font-medium text-foreground">confirmation de votre rendez-vous</strong>, par SMS et/ou par email.</p>
             <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground sm:col-span-2">
               <span>Première consultation chez nous ?</span>
               <label class="flex items-center gap-2"><input type="radio" name="premiere consultation" value="Oui" checked class="accent-[var(--sage)]">Oui</label>
@@ -234,16 +239,16 @@
               <div><dt class="text-xs text-muted-foreground">Motif</dt><dd id="r-motif" class="text-foreground">—</dd></div>
               <div><dt class="text-xs text-muted-foreground">Psychologue</dt><dd id="r-psy" class="text-foreground">Sans préférence</dd></div>
               <div><dt class="text-xs text-muted-foreground">Lieu</dt><dd id="r-lieu" class="text-foreground">—</dd></div>
-              <div><dt class="text-xs text-muted-foreground">Créneau</dt><dd id="r-creneau" class="text-foreground">—</dd></div>
+              <div><dt class="text-xs text-muted-foreground">Créneau souhaité</dt><dd id="r-creneau" class="text-foreground">—</dd></div>
               <div class="border-t border-border pt-3"><dt class="text-xs text-muted-foreground">Tarif indicatif</dt><dd id="r-tarif" class="font-serif text-2xl text-sage">—</dd></div>
             </dl>
             <p id="form-alerte" hidden class="mt-4 text-xs" style="color: oklch(57.7% .245 27.325)"></p>
-            <button type="submit" class="mt-6 flex w-full inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 py-3 disabled:opacity-60">Envoyer ma demande</button>
-            <p class="mt-3 text-center text-[11px] leading-relaxed text-muted-foreground">Rien à payer maintenant : vous réglerez directement votre psychologue, une fois le rendez-vous confirmé.</p>
+            <button type="submit" class="mt-6 flex w-full inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 py-3 disabled:opacity-60">Envoyer ma demande de rendez-vous</button>
+            <p class="mt-3 text-center text-[11px] leading-relaxed text-muted-foreground">Votre rendez-vous sera confirmé par SMS et/ou email après validation du psychologue. Rien à payer maintenant.</p>
           </div>
           <div id="form-merci" hidden class="rounded-2xl bg-sage p-6 text-sm leading-relaxed text-sage-foreground">
             <p class="mb-2 font-serif text-xl">Merci !</p>
-            Votre demande a bien été envoyée. Andie, gérante du centre, vous appelle rapidement pour vous guider et confirmer le rendez-vous. Vous recevrez ensuite un email de confirmation avec toutes les informations pratiques.
+            Votre demande a bien été envoyée. <strong class="font-medium">Attention : votre rendez-vous n'est pas encore confirmé.</strong> Andie, gérante du centre, vous recontacte rapidement. Dès que le psychologue a validé le créneau, vous recevez un <strong class="font-medium">SMS et/ou un email de confirmation</strong> avec toutes les informations pratiques.
           </div>
           <div id="form-erreur" hidden class="rounded-2xl border p-6 text-sm leading-relaxed" style="color: oklch(57.7% .245 27.325); border-color: oklch(57.7% .245 27.325 / .3)">L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous à <a href="mailto:lespacecommunpsy@gmail.com" class="underline">lespacecommunpsy@gmail.com</a>.</div>
           <div class="rounded-xl border border-ink/15 bg-ink/5 p-5 text-xs leading-relaxed text-muted-foreground">
