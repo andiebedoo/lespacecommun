@@ -130,7 +130,7 @@ function majMotif() {
     lien.innerHTML = `Pour mieux comprendre : <a href="${motif.lien}" class="text-sage underline underline-offset-4" target="_blank">lire la page ${motif.libelle}</a>`;
     lien.hidden = false;
   } else if (cle === 'urgence') {
-    lien.textContent = 'Nous vous rappelons dans les 24 h. Le choix du créneau est facultatif. En cas de danger immédiat, appelez le 15 ou le 3114.';
+    lien.innerHTML = 'Nous essayons de vous recevoir <strong>dans la journée si un psychologue est disponible</strong> ; le choix du créneau est facultatif. Nous ne prenons pas en charge les situations de crise : en cas de danger, appelez le 15, le 112 ou le 3114, ou rendez-vous aux urgences (<a href="urgences.html" class="underline">contacts d\'urgence</a>).';
     lien.hidden = false;
   } else {
     lien.hidden = true;

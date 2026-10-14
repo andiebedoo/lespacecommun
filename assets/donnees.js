@@ -111,7 +111,7 @@ window.EC = {
    "type": "autre"
   },
   "urgence": {
-   "libelle": "Situation de crise (sous 24 h)",
+   "libelle": "Rendez-vous rapide (dans la journée si possible)",
    "type": "urgence"
   },
   "autre": {
