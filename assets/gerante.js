@@ -114,7 +114,7 @@ function mettreAJour() {
     '',
     'Merci de noter le numéro de réservation : c\'est lui, et non le nom du patient, qui figurera sur la facture mensuelle du centre.',
   ].filter((x, i, a) => x !== '' || a[i - 1] !== '').join('\n');
-  document.getElementById('g-enregistre').textContent = lireRegistre().some((x) => x.n === rdv.n) ? 'Déjà dans le registre (un nouvel ajout le met à jour).' : '';
+  document.getElementById('g-enregistre').textContent = lireRegistre().some((x) => x.n === rdv.n) ? 'Dans le registre ✓ (une modification se reporte en cliquant à nouveau).' : '';
   document.getElementById('g-mailto').href = `mailto:${encodeURIComponent(champ('email').value.trim())}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(email)}`;
 }
 
@@ -152,6 +152,7 @@ function afficherRegistre() {
       if (!window.confirm(`Retirer la réservation ${x.n} du registre ?`)) return;
       ecrireRegistre(lireRegistre().filter((y) => y.n !== x.n));
       afficherRegistre();
+      afficherPlanning();
       mettreAJour();
     });
     td.appendChild(b);
@@ -164,7 +165,64 @@ function afficherRegistre() {
     : 'Aucune réservation pour cette sélection.';
 }
 
-document.getElementById('g-enregistrer').addEventListener('click', () => {
+// --- Planning de la semaine (à partir du registre) ---
+const iso = (x) => `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, '0')}-${String(x.getDate()).padStart(2, '0')}`;
+function lundiDe(x) {
+  const l = new Date(x.getFullYear(), x.getMonth(), x.getDate());
+  l.setDate(l.getDate() - ((l.getDay() + 6) % 7));
+  return l;
+}
+let lundi = lundiDe(new Date());
+
+function afficherPlanning() {
+  const jours = Array.from({ length: 7 }, (_, i) => new Date(lundi.getFullYear(), lundi.getMonth(), lundi.getDate() + i));
+  const debut = iso(jours[0]);
+  const fin = iso(jours[6]);
+  const semaine = lireRegistre().filter((x) => x.d >= debut && x.d <= fin).sort((a, b) => a.h.localeCompare(b.h));
+  const ids = Object.keys(psys);
+  if (semaine.some((x) => !psys[x.p])) ids.push('');
+  const fmt = (o) => new Intl.DateTimeFormat('fr-FR', o);
+  document.getElementById('s-titre').textContent = `Semaine du ${fmt({ day: 'numeric', month: 'long' }).format(jours[0])} au ${fmt({ day: 'numeric', month: 'long', year: 'numeric' }).format(jours[6])}`;
+
+  const cellule = (tag, classe, texte) => {
+    const c = document.createElement(tag);
+    c.className = classe;
+    if (texte) c.textContent = texte;
+    return c;
+  };
+  const entete = document.createElement('tr');
+  entete.appendChild(cellule('th', 'w-32 p-3 font-medium', 'Jour'));
+  ids.forEach((id) => entete.appendChild(cellule('th', 'p-3 font-medium', nomPsy(id))));
+  document.getElementById('s-entete').replaceChildren(entete);
+
+  const aujourdhui = iso(new Date());
+  document.getElementById('s-lignes').replaceChildren(...jours.map((j) => {
+    const tr = cellule('tr', `border-t border-border align-top${iso(j) === aujourdhui ? ' bg-sage/5' : ''}`);
+    const nomJour = fmt({ weekday: 'long', day: 'numeric' }).format(j);
+    tr.appendChild(cellule('th', 'p-3 font-medium', nomJour.charAt(0).toUpperCase() + nomJour.slice(1)));
+    ids.forEach((id) => {
+      const td = cellule('td', 'p-2');
+      semaine.filter((x) => x.d === iso(j) && (psys[x.p] ? x.p : '') === id).forEach((x) => {
+        const carte = cellule('div', 'mb-2 rounded-lg bg-sage/10 p-2 ring-1 ring-sage/20');
+        carte.appendChild(cellule('p', 'font-medium text-sage', `${x.h.replace(':', ' h ').replace(' h 00', ' h')} · ${TYPES[x.t] ? TYPES[x.t].libelle.replace('Consultation ', '') : x.t}`));
+        carte.appendChild(cellule('p', 'text-xs text-muted-foreground', `${paiement.lieux[x.l] || x.l} · ${x.n}`));
+        td.appendChild(carte);
+      });
+      tr.appendChild(td);
+    });
+    return tr;
+  }));
+  document.getElementById('s-total').textContent = semaine.length
+    ? `${semaine.length} rendez-vous cette semaine.`
+    : 'Aucun rendez-vous enregistré cette semaine.';
+}
+document.getElementById('s-prec').addEventListener('click', () => { lundi.setDate(lundi.getDate() - 7); afficherPlanning(); });
+document.getElementById('s-suiv').addEventListener('click', () => { lundi.setDate(lundi.getDate() + 7); afficherPlanning(); });
+document.getElementById('s-auj').addEventListener('click', () => { lundi = lundiDe(new Date()); afficherPlanning(); });
+
+// Enregistre (ou met à jour) le RDV dans le registre. Appelé automatiquement dès que la
+// confirmation est envoyée au patient (email, SMS ou lien copiés, messagerie ouverte).
+function enregistrer() {
   const rdv = lireRdv(lienPatient().q);
   const info = document.getElementById('g-enregistre');
   if (!rdv) { info.textContent = 'Indiquez d\'abord la date et l\'heure du rendez-vous.'; return; }
@@ -173,7 +231,11 @@ document.getElementById('g-enregistrer').addEventListener('click', () => {
   info.textContent = ok ? `Réservation ${rdv.n} ajoutée au registre ✓` : 'Enregistrement impossible : le stockage du navigateur est désactivé.';
   moisRegistre.value = rdv.d.slice(0, 7);
   afficherRegistre();
-});
+  lundi = lundiDe(rdv.debut);
+  afficherPlanning();
+}
+document.getElementById('g-enregistrer').addEventListener('click', enregistrer);
+document.getElementById('g-mailto').addEventListener('click', enregistrer);
 
 document.getElementById('g-nouveau').addEventListener('click', () => {
   const psy = champ('p').value;
@@ -206,6 +268,7 @@ formG.addEventListener('change', mettreAJour);
 document.querySelectorAll('[data-copier]').forEach((b) => b.addEventListener('click', async () => {
   const texte = document.getElementById(b.dataset.copier).value;
   if (!texte) return;
+  if (b.dataset.copier !== 'g-psy-msg') enregistrer(); // confirmation envoyée au patient
   const avant = b.textContent;
   try {
     await navigator.clipboard.writeText(texte);
@@ -218,4 +281,5 @@ document.querySelectorAll('[data-copier]').forEach((b) => b.addEventListener('cl
 nouveauSuffixe();
 mettreAJour();
 afficherRegistre();
+afficherPlanning();
 })();

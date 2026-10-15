@@ -188,11 +188,34 @@
             <textarea id="g-psy-msg" rows="6" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring mb-3 w-full text-sm leading-relaxed"></textarea>
             <div class="flex flex-wrap gap-2">
               <button type="button" data-copier="g-psy-msg" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-1.5 text-xs">Copier le message</button>
-              <button type="button" id="g-enregistrer" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 px-3 py-1.5 text-xs">Ajouter au registre de facturation</button>
+              <button type="button" id="g-enregistrer" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-1.5 text-xs">Mettre à jour le registre</button>
             </div>
+            <p class="mt-2 text-xs text-muted-foreground">Le rendez-vous s'ajoute automatiquement au registre et au planning dès que vous copiez l'email, le SMS ou le lien du patient, ou ouvrez l'email dans votre messagerie.</p>
             <p id="g-enregistre" class="mt-2 text-xs text-muted-foreground"></p>
           </div>
         </div>
+      </div>
+
+      <div class="mt-16 border-t border-border pt-12" id="planning">
+        <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 class="mb-2 font-serif text-3xl text-sage">Planning de la semaine</h2>
+            <p class="text-sm text-muted-foreground">Les rendez-vous du registre, par jour et par psychologue.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" id="s-prec" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-2" aria-label="Semaine précédente">←</button>
+            <button type="button" id="s-auj" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-2">Cette semaine</button>
+            <button type="button" id="s-suiv" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-2" aria-label="Semaine suivante">→</button>
+          </div>
+        </div>
+        <p id="s-titre" class="mb-4 font-serif text-xl text-sage"></p>
+        <div class="overflow-x-auto rounded-2xl ring-1 ring-border">
+          <table class="w-full min-w-[40rem] table-fixed text-left text-sm">
+            <thead id="s-entete" class="bg-secondary text-xs uppercase tracking-widest text-muted-foreground"></thead>
+            <tbody id="s-lignes"></tbody>
+          </table>
+        </div>
+        <p id="s-total" class="mt-4 text-sm text-muted-foreground"></p>
       </div>
 
       <div class="mt-16 border-t border-border pt-12" id="registre">
