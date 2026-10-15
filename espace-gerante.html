@@ -145,7 +145,7 @@
     <div class="mx-auto max-w-6xl">
       <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-clay">Espace gérante · page privée</p>
       <h1 class="mb-3 font-serif text-4xl text-sage">Confirmer un rendez-vous</h1>
-      <p class="mb-10 max-w-[62ch] text-muted-foreground">Renseignez le rendez-vous convenu avec le patient : l'outil calcule le montant, crée son lien de paiement personnel et prépare l'email de confirmation. Aucune donnée n'est enregistrée ni envoyée par cette page.</p>
+      <p class="mb-10 max-w-[62ch] text-muted-foreground">Renseignez le rendez-vous convenu avec le patient : l'outil attribue un numéro de réservation, calcule le montant, crée le lien personnel du patient et prépare l'email de confirmation. Rien n'est envoyé par cette page.</p>
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <form id="g-form" class="grid content-start gap-5 sm:grid-cols-2">
           <label class="flex flex-col gap-2 text-sm text-muted-foreground">Prénom du patient<input name="prenom" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring" autocomplete="off"></label>
@@ -157,6 +157,10 @@
           <label id="g-adresse" hidden class="flex flex-col gap-2 text-sm text-muted-foreground sm:col-span-2">Adresse du cabinet<input name="a" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring" placeholder="Ex. : 12 rue …, 92100 Boulogne"></label>
           <label class="flex flex-col gap-2 text-sm text-muted-foreground">Type de séance<select name="t" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"><option value="adulte">Adulte / ado · 45 min</option><option value="enfant">Enfant · 40 min</option><option value="emdr">EMDR</option><option value="bilan">Bilan psychologique</option></select></label>
           <label class="flex items-center gap-3 self-end pb-3 text-sm text-muted-foreground"><input name="r" type="checkbox" value="1" class="accent-[var(--sage)]">Tarif réduit 18 – 25 ans (hors bilans)</label>
+          <div class="flex flex-col gap-2 text-sm text-muted-foreground sm:col-span-2">N° de réservation
+            <div class="flex flex-wrap items-center gap-3"><output id="g-ref" class="rounded-md bg-secondary px-3 py-2.5 font-mono text-base text-sage ring-1 ring-border">—</output><button type="button" id="g-nouveau" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-1.5 text-xs">Nouveau rendez-vous</button></div>
+            <span class="text-xs">Le numéro remplace le nom du patient sur les factures adressées aux psychologues.</span>
+          </div>
         </form>
         <div class="space-y-4">
           <div class="rounded-2xl bg-secondary p-6 ring-1 ring-border">
@@ -179,7 +183,33 @@
             </div>
             <textarea id="g-sms" hidden></textarea>
           </div>
+          <div class="rounded-2xl border border-border p-6">
+            <label class="mb-2 block text-xs uppercase tracking-widest text-muted-foreground" for="g-psy-msg">Message pour le psychologue</label>
+            <textarea id="g-psy-msg" rows="6" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring mb-3 w-full text-sm leading-relaxed"></textarea>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-copier="g-psy-msg" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-3 py-1.5 text-xs">Copier le message</button>
+              <button type="button" id="g-enregistrer" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 px-3 py-1.5 text-xs">Ajouter au registre de facturation</button>
+            </div>
+            <p id="g-enregistre" class="mt-2 text-xs text-muted-foreground"></p>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-16 border-t border-border pt-12" id="registre">
+        <h2 class="mb-3 font-serif text-3xl text-sage">Registre de facturation</h2>
+        <p class="mb-6 max-w-[70ch] text-sm text-muted-foreground">Les rendez-vous confirmés, sans nom de patient : numéro de réservation, date, psychologue, séance et montant. De quoi établir en fin de mois la facture de chaque psychologue dans le respect du secret professionnel. Le registre est conservé dans ce navigateur, sur cet appareil seulement : exportez-le chaque mois.</p>
+        <div class="mb-6 flex flex-wrap items-end gap-4">
+          <label class="flex flex-col gap-2 text-sm text-muted-foreground">Mois<input id="r-mois" type="month" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"></label>
+          <label class="flex flex-col gap-2 text-sm text-muted-foreground">Psychologue<select id="r-psy" class="rounded-md border border-input bg-canvas px-3 py-2.5 text-foreground outline-none focus:ring-2 focus:ring-ring"><option value="">Tous</option><option value="andie">Andie Bedoucha</option><option value="viva">Viva Tavlitzki</option></select></label>
+          <button type="button" id="r-export" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary px-4 py-2.5">Télécharger (tableur CSV)</button>
+        </div>
+        <div class="overflow-x-auto rounded-2xl ring-1 ring-border">
+          <table class="w-full min-w-[40rem] text-left text-sm">
+            <thead class="bg-secondary text-xs uppercase tracking-widest text-muted-foreground"><tr><th class="p-3 font-medium">N° de réservation</th><th class="p-3 font-medium">Date</th><th class="p-3 font-medium">Psychologue</th><th class="p-3 font-medium">Séance</th><th class="p-3 font-medium">Lieu</th><th class="p-3 text-right font-medium">Montant</th><th class="p-3"><span class="sr-only">Retirer</span></th></tr></thead>
+            <tbody id="r-lignes"></tbody>
+          </table>
+        </div>
+        <p id="r-total" class="mt-4 text-sm text-muted-foreground"></p>
       </div>
     </div>
   </section>

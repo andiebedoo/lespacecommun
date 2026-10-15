@@ -1,6 +1,7 @@
 // Paiement d'un rendez-vous confirmé.
 // Le lien envoyé au patient décrit la séance, sans aucune donnée personnelle :
-//   paiement.html?d=2026-10-20&h=10:00&l=paris&p=andie&t=adulte&r=0&a=
+//   paiement.html?n=EC-2610-7KQ3&d=2026-10-20&h=10:00&l=paris&p=andie&t=adulte&r=0&a=
+// n : numéro de réservation (sert aussi à la facturation des psychologues, sans nom de patient),
 // d : date, h : heure, l : lieu, p : psychologue, t : type (adulte|enfant|emdr|bilan),
 // r : 1 si tarif réduit 18 – 25 ans (jamais appliqué aux bilans), a : adresse du cabinet (lieu « idf »).
 // Le montant est recalculé ici à partir des tarifs du site, jamais lu dans le lien.
@@ -14,6 +15,9 @@ const TYPES = {
   emdr: { libelle: 'Séance d\'EMDR', duree: 45 },
   bilan: { libelle: 'Bilan psychologique complet', duree: 60 },
 };
+
+// EC-AAMM-XXXX : année et mois du RDV, puis 4 caractères sans ambiguïté (ni 0/O, ni 1/I).
+const FORMAT_REF = /^EC-\d{4}-[A-HJ-NP-Z2-9]{4}$/;
 
 const euros = (txt) => parseInt(txt, 10);
 const majuscule = (txt) => txt.charAt(0).toUpperCase() + txt.slice(1);
@@ -35,6 +39,7 @@ function lireRdv(params) {
     p: psys[params.get('p')] ? params.get('p') : '',
     r: params.get('r') === '1',
     a: (params.get('a') || '').slice(0, 160),
+    n: FORMAT_REF.test(params.get('n') || '') ? params.get('n') : '',
   };
 }
 
@@ -90,11 +95,11 @@ function fichierAgenda(rdv) {
   const echap = (x) => x.replace(/[\\,;]/g, (c) => `\\${c}`);
   const ics = [
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//L Espace Commun//RDV//FR', 'BEGIN:VEVENT',
-    `UID:${rdv.d}-${rdv.h}-${rdv.p}@lespacecommun.fr`,
+    `UID:${rdv.n || `${rdv.d}-${rdv.h}-${rdv.p}`}@lespacecommun.fr`,
     `DTSTART:${f(rdv.debut)}`, `DTEND:${f(fin)}`,
     `SUMMARY:${echap(`Séance avec ${t.psy} — L'Espace Commun`)}`,
     `LOCATION:${echap(rdv.l === 'visio' ? 'Téléconsultation' : t.adresse)}`,
-    `DESCRIPTION:${echap(`${t.seance}. En cas d'empêchement, prévenez au moins 48 h avant : ${paiement.email}`)}`,
+    `DESCRIPTION:${echap(`${rdv.n ? `Réservation ${rdv.n}. ` : ''}${t.seance}. En cas d'empêchement, prévenez au moins 48 h avant : ${paiement.email}`)}`,
     'BEGIN:VALARM', 'TRIGGER:-PT2H', 'ACTION:DISPLAY', 'DESCRIPTION:Rappel de séance', 'END:VALARM',
     'END:VEVENT', 'END:VCALENDAR',
   ].join('\r\n');
@@ -129,6 +134,10 @@ if (document.getElementById('p-contenu')) {
     ecrire('p-lieu', t.lieu);
     ecrire('p-adresse', t.adresse);
     ecrire('p-montant', t.montant);
+    if (rdv.n) {
+      ecrire('p-ref', rdv.n);
+      document.getElementById('p-ref-bloc').hidden = false;
+    }
 
     // Le patient règle directement son psychologue :
     // au cabinet en espèces ou par carte ; en visio par carte, via un lien de paiement.
@@ -164,6 +173,11 @@ if (document.getElementById('m-rappel')) {
     const t = texteRdv(rdv);
     document.getElementById('m-date').textContent = `${majuscule(t.date)} à ${t.heure}`;
     document.getElementById('m-lieu').textContent = `${t.psy} · ${t.lieu}`;
+    if (rdv.n) {
+      const ref = document.getElementById('m-ref');
+      ref.textContent = `N° de réservation : ${rdv.n}`;
+      ref.hidden = false;
+    }
     document.getElementById('m-rappel').hidden = false;
     const bouton = document.getElementById('p-agenda');
     bouton.hidden = false;
@@ -171,4 +185,4 @@ if (document.getElementById('m-rappel')) {
   }
 }
 
-window.ECPaiement = { lireRdv, montant, texteRdv, rdvLienPsy, deNom, TYPES };
+window.ECPaiement = { lireRdv, montant, texteRdv, rdvLienPsy, deNom, TYPES, FORMAT_REF };
