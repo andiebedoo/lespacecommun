@@ -149,6 +149,15 @@ window.EC = {
     "wais-v",
     "bilans-projectifs"
    ]
+  },
+  "laura": {
+   "nom": "Laura Jess",
+   "liens": {},
+   "slugs": [
+    "addictions",
+    "depression-anxiete",
+    "hypnotherapie"
+   ]
   }
  },
  "tarifs": {
