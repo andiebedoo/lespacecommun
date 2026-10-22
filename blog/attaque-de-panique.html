@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L&#x27;attaque de panique : quand le corps s&#x27;emballe sans prévenir — Blog L&#x27;Espace Commun</title>
+  <meta name="description" content="Cœur qui s&#x27;emballe, souffle coupé, peur de mourir ou de devenir fou : l&#x27;attaque de panique est une expérience impressionnante, mais elle n&#x27;est pas dangereuse en elle-même. Ce que la recherche en psychologie en comprend aujourd&#x27;hui, et ce qui aide vraiment." />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Fraunces", ui-serif, Georgia, serif;
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-sage: var(--sage);
+      --color-sage-foreground: var(--sage-foreground);
+      --color-clay: var(--clay);
+      --color-ink: var(--ink);
+      --color-ink-foreground: var(--ink-foreground);
+      --color-canvas: var(--canvas);
+    }
+    :root {
+      --background: oklch(97.3% .005 95.1);
+      --foreground: oklch(21% .006 285.9);
+      --secondary: oklch(96.7% .001 286.4);
+      --secondary-foreground: oklch(33.5% .019 169.7);
+      --muted-foreground: oklch(55.2% .014 285.9);
+      --border: oklch(92% .004 286.3);
+      --input: oklch(92% .004 286.3);
+      --ring: oklch(33.5% .019 169.7);
+      --sage: oklch(33.5% .019 169.7);
+      --sage-foreground: oklch(97.3% .005 95.1);
+      --clay: oklch(73.2% .06 59.8);
+      --ink: oklch(28.3% .039 249.3);
+      --ink-foreground: oklch(97.3% .005 95.1);
+      --canvas: oklch(97.3% .005 95.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--background); color: var(--foreground); }
+    h1, h2, h3 { overflow-wrap: break-word; }
+    * { border-color: var(--border); }
+    .prose-ec p { margin-bottom: 1rem; line-height: 1.75; color: var(--muted-foreground); }
+    .prose-ec ul { margin: 0 0 1rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+    .prose-ec li { margin-bottom: .5rem; line-height: 1.7; }
+    .prose-ec li::marker { color: var(--clay); }
+    .prose-ec strong { color: var(--foreground); font-weight: 500; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<div class="min-h-screen bg-canvas font-sans text-foreground selection:bg-clay/20">
+
+  <div class="bg-ink px-6 py-3 text-ink-foreground">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
+      <p class="text-pretty text-sm font-medium">En situation de crise ou de danger, appelez le 15, le 112 ou le 3114, ou rendez-vous aux urgences.</p>
+      <a href="../urgences.html" class="whitespace-nowrap text-sm font-semibold underline decoration-ink-foreground/40 underline-offset-4 transition-colors hover:decoration-ink-foreground">Contacts d'urgence</a>
+    </div>
+  </div>
+  <nav class="sticky top-0 z-50 border-b border-border bg-canvas/85 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+      <div class="flex items-center gap-8">
+        <a href="../index.html" class="flex items-center gap-3 whitespace-nowrap font-serif text-base font-medium tracking-tight text-sage min-[360px]:text-lg sm:text-xl">
+          <img src="../images/favicon.png" alt="" width="36" height="36" class="hidden size-9 rounded-full ring-1 ring-border sm:block">L'Espace Commun</a>
+        <div class="hidden items-center gap-5 xl:flex">
+          
+        <div class="group relative">
+          <a href="../troubles/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Motifs de consultation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../troubles/depression-anxiete.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Dépression &amp; anxiété</a><a href="../troubles/tca.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="../troubles/tsa.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="../troubles/tdah.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="../troubles/confiance-en-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Confiance en soi</a><a href="../troubles/travail-sur-soi.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Démarrer un travail sur soi</a><a href="../troubles/addictions.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Addictions</a><a href="../troubles/perinatalite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Périnatalité</a><a href="../troubles/obesite.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Obésité</a><a href="../troubles/maladies-chroniques.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Maladies chroniques</a><a href="../troubles/souffrance-au-travail.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Burn-out &amp; travail</a>
+            <a href="../troubles/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les motifs de consultation</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="../approches/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Approches
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../approches/tcc.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">TCC</a><a href="../approches/psychanalyse.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Psychanalyse</a><a href="../approches/emdr.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">EMDR</a><a href="../approches/hypnotherapie.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Hypnothérapie</a><a href="../approches/icv.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Intégration du Cycle de la Vie (ICV)</a><a href="../approches/therapie-breve.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Thérapie brève</a><a href="../approches/systemique.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Systémique</a>
+            <a href="../approches/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Comprendre les approches</a>
+          </div>
+        </div>
+          
+        <div class="group relative">
+          <a href="../bilans/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage inline-flex items-center gap-1 py-6" aria-haspopup="true">Bilans
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 rounded-xl border border-border bg-canvas p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <a href="../bilans/wisc-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WISC-V · enfant</a><a href="../bilans/wais-v.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">WAIS-V · adulte</a><a href="../bilans/bilans-projectifs.html" class="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-sage">Bilans projectifs</a>
+            <a href="../bilans/index.html" class="mt-1 block border-t border-border px-3 pt-3 pb-2 text-xs font-semibold uppercase tracking-wider text-clay hover:text-sage">Tous les bilans</a>
+          </div>
+        </div>
+          <a href="../equipe.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">L'équipe</a>
+          <a href="../infos.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Infos &amp; tarifs</a>
+          <a href="../blog/index.html" class="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-sage">Blog</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="../rdv.html" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 shrink-0 whitespace-nowrap px-3 sm:px-4"><span class="hidden sm:inline">Prendre rendez-vous</span><span class="hidden min-[360px]:inline sm:hidden">Rendez-vous</span><span class="min-[360px]:hidden">RDV</span></a>
+        <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile" class="-mr-2 rounded-md p-2 text-sage transition-colors hover:bg-secondary xl:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path class="icon-open" d="M4 7h16M4 12h16M4 17h16"/><path class="icon-close hidden" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu-mobile" class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-canvas px-4 py-2 sm:px-6 xl:hidden">
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Motifs de consultation
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../troubles/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../troubles/depression-anxiete.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a><a href="../troubles/tca.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a><a href="../troubles/tsa.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a><a href="../troubles/tdah.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a><a href="../troubles/confiance-en-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Confiance en soi</a><a href="../troubles/travail-sur-soi.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a><a href="../troubles/addictions.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Addictions</a><a href="../troubles/perinatalite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Périnatalité</a><a href="../troubles/obesite.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Obésité</a><a href="../troubles/maladies-chroniques.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a><a href="../troubles/souffrance-au-travail.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Approches
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../approches/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../approches/tcc.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">TCC</a><a href="../approches/psychanalyse.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Psychanalyse</a><a href="../approches/emdr.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">EMDR</a><a href="../approches/hypnotherapie.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a><a href="../approches/icv.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Intégration du Cycle de la Vie (ICV)</a><a href="../approches/therapie-breve.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Thérapie brève</a><a href="../approches/systemique.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Systémique</a></div>
+      </details>
+      
+      <details class="border-b border-border">
+        <summary class="flex items-center justify-between py-3 text-base text-foreground">Bilans
+          <svg class="chevron transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="pb-3"><a href="../bilans/index.html" class="block py-2 pl-4 text-sm font-medium text-sage">Vue d'ensemble</a><a href="../bilans/wisc-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a><a href="../bilans/wais-v.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a><a href="../bilans/bilans-projectifs.html" class="block py-2 pl-4 text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></div>
+      </details>
+      <a href="../equipe.html" class="block border-b border-border py-3 text-base">L'équipe</a>
+      <a href="../infos.html" class="block border-b border-border py-3 text-base">Infos &amp; tarifs</a>
+      <a href="../blog/index.html" class="block border-b border-border py-3 text-base">Blog</a>
+      <a href="../rdv.html" class="mt-4 mb-2 flex inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90">Prendre rendez-vous</a>
+    </div>
+  </nav>
+<main>
+
+  <article class="px-6 pt-10 pb-8 md:pt-14">
+    <div class="mx-auto max-w-3xl">
+      <nav aria-label="Fil d'Ariane" class="mb-8 flex flex-wrap items-center gap-2 text-xs text-muted-foreground"><a href="../index.html" class="hover:text-sage">Accueil</a><span aria-hidden="true" class="text-border">/</span><a href="../blog/index.html" class="hover:text-sage">Blog</a><span aria-hidden="true" class="text-border">/</span><span class="text-foreground">L&#x27;attaque de panique : quand le corps s&#x27;emballe sans prévenir</span></nav>
+      <p class="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground"><span class="font-semibold uppercase tracking-widest text-clay">Motif de consultation</span><time datetime="2026-10-22">22 octobre 2026</time><span>· 5 min de lecture</span></p>
+      <h1 class="mb-6 text-balance font-serif text-3xl leading-tight text-sage md:text-5xl">L&#x27;attaque de panique : quand le corps s&#x27;emballe sans prévenir</h1>
+      <p class="mb-12 text-pretty text-lg leading-relaxed text-foreground/80">Cœur qui s&#x27;emballe, souffle coupé, peur de mourir ou de devenir fou : l&#x27;attaque de panique est une expérience impressionnante, mais elle n&#x27;est pas dangereuse en elle-même. Ce que la recherche en psychologie en comprend aujourd&#x27;hui, et ce qui aide vraiment.</p>
+      
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Une vague de peur qui surgit d&#x27;un coup</h2>
+            <div class="prose-ec"><p>Vous êtes dans le métro, au supermarché ou tranquillement sur votre canapé. Soudain, votre cœur se met à battre très fort, vous avez du mal à respirer, vos mains tremblent ou fourmillent, la tête vous tourne. Une peur intense vous envahit : « Je vais faire un malaise », « Je fais une crise cardiaque », « Je deviens fou ».</p><p>C'est ce qu'on appelle une <strong>attaque de panique</strong>. Le Manuel MSD, ouvrage médical de référence, la décrit comme l'apparition brutale d'une peur ou d'un malaise intense, accompagnée de sensations physiques et de pensées alarmantes. Elle dure généralement de quelques minutes à une heure, puis retombe d'elle-même.</p><p>Point important, souvent rassurant pour les personnes concernées : selon ce même manuel, <strong>les attaques de panique ne sont pas dangereuses sur le plan médical</strong>, même si elles donnent l'impression inverse.</p></div>
+          </section>
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Que ressent-on pendant une crise ?</h2>
+            <div class="prose-ec"><p>Les signes sont à la fois physiques et psychologiques. Parmi les plus fréquents :</p><ul><li><strong>dans le corps</strong> : palpitations, douleur ou gêne dans la poitrine, sensation d'étouffer ou de manquer d'air, vertiges, sueurs, bouffées de chaleur ou frissons, tremblements, nausées ou maux de ventre, fourmillements ;</li><li><strong>dans la tête</strong> : peur de mourir, peur de perdre le contrôle ou de « devenir fou », impression d'irréalité, comme si le monde ou soi-même devenait étrange.</li></ul><p>Ces sensations ressemblent parfois à celles d'un problème cardiaque. C'est pourquoi un premier bilan médical est souvent utile, surtout si vous n'avez jamais été examiné pour ces symptômes : il permet d'écarter une cause physique (par exemple un trouble de la thyroïde ou du cœur) et de vous rassurer.</p></div>
+          </section>
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Attaque de panique ou trouble panique ?</h2>
+            <div class="prose-ec"><p>Vivre une attaque de panique est loin d'être rare : selon le Manuel MSD, entre 8 % et 23 % des personnes en connaîtront au moins une au cours de leur vie. Une crise isolée ne signifie pas que l'on souffre d'un trouble.</p><p>On parle de <strong>trouble panique</strong> lorsque les crises se répètent de façon inattendue et qu'elles changent la vie de la personne, pendant au moins un mois :</p><ul><li>on s'inquiète en permanence de la prochaine crise et de ses conséquences ;</li><li>on se met à <strong>éviter</strong> des lieux ou des activités (transports, magasins, sport, sorties) par peur qu'une crise survienne.</li></ul><p>Le trouble panique concerne environ 2 à 3 % de la population sur une année. Il débute le plus souvent à la fin de l'adolescence ou chez le jeune adulte, et touche environ deux fois plus de femmes que d'hommes.</p></div>
+          </section>
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Pourquoi le corps s&#x27;emballe-t-il ?</h2>
+            <div class="prose-ec"><p>En 1986, le psychologue britannique David M. Clark, de l'université d'Oxford, a proposé une explication devenue centrale dans la compréhension de la panique. Selon son modèle, la crise naît d'une <strong>interprétation catastrophique</strong> de sensations corporelles pourtant banales.</p><p>Concrètement, tout le monde ressent parfois un cœur qui accélère ou un léger vertige. Mais si l'on interprète ce signal comme le début d'une crise cardiaque, la peur monte. Or la peur, à son tour, accélère encore le cœur et le souffle. Ces sensations plus fortes semblent confirmer le danger… et un véritable cercle vicieux s'installe en quelques instants.</p><p>Ce modèle aide à comprendre pourquoi les crises peuvent survenir « sans raison » apparente : le déclencheur est souvent une petite sensation interne, à peine perçue, plutôt qu'une situation extérieure.</p></div>
+          </section>
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Ce qui aide</h2>
+            <div class="prose-ec"><p>La bonne nouvelle, c'est que le trouble panique se soigne bien. Le Manuel MSD cite la psychothérapie, les médicaments (prescrits par un médecin), ou l'association des deux. Du côté de la psychothérapie, la <strong>thérapie cognitive et comportementale (TCC)</strong> est la plus étudiée.</p><p>En 2018, une équipe internationale menée par Alessandro Pompoli a analysé 72 essais réunissant plus de 4 000 patients, pour repérer quels ingrédients de la TCC sont les plus utiles. Leurs résultats suggèrent que :</p><ul><li>l'<strong>exposition intéroceptive</strong> est l'un des éléments les plus efficaces : il s'agit, avec le thérapeute, de provoquer volontairement et progressivement les sensations redoutées (par exemple accélérer son cœur en montant des marches) pour découvrir qu'elles ne sont pas dangereuses ;</li><li>les séances <strong>en face à face</strong> donnent de meilleurs résultats que l'auto-traitement seul ;</li><li>travailler sur les pensées catastrophiques semble aussi aider, même si les résultats sont moins nets.</li></ul><p>Les auteurs restent prudents : beaucoup d'études étaient de qualité inégale et les effets à long terme n'ont pas été évalués. D'autres approches, par exemple d'orientation analytique, peuvent aussi aider à comprendre ce que l'angoisse vient dire de votre histoire.</p></div>
+          </section>
+          <section class="mb-12">
+            <h2 class="mb-5 text-balance font-serif text-2xl text-sage md:text-3xl">Vous n&#x27;avez pas à rester seul face à la peur</h2>
+            <div class="prose-ec"><p>Si les crises se répètent, si vous commencez à renoncer à certains lieux ou à certaines activités, ou si la peur de la prochaine crise occupe vos pensées, il est temps d'en parler. Un accompagnement psychologique peut vous aider à comprendre ce qui se passe dans votre corps et à reprendre peu à peu votre liberté de mouvement. Chez L'Espace Commun, Andie, gérante du centre, vous oriente vers le psychologue le plus adapté à votre situation.</p></div>
+          </section>
+      <a href="../troubles/depression-anxiete.html" class="mb-10 flex items-center justify-between gap-4 rounded-2xl bg-secondary p-6 ring-1 ring-border transition-colors hover:bg-sage/5"><span><span class="mb-1 block text-xs font-semibold uppercase tracking-widest text-clay">Pour aller plus loin</span><span class="font-serif text-lg text-sage">Dépression &amp; anxiété</span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <aside class="rounded-2xl border border-border p-6 md:p-8">
+        <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Sources</h2>
+        <ul class="list-disc space-y-2 pl-5 marker:text-clay"><li class="text-sm leading-relaxed text-muted-foreground">John W. Barnhill, « <a href="https://www.msdmanuals.com/fr/professional/troubles-psychiatriques/anxiété-et-troubles-liés-au-traumatisme-et-au-stress/attaque-de-panique-et-trouble-panique" class="text-sage underline underline-offset-4" target="_blank" rel="noopener">Attaque de panique et trouble panique</a> », <em>Manuel MSD, version pour professionnels de la santé, révision avril 2026</em>.</li><li class="text-sm leading-relaxed text-muted-foreground">David M. Clark, « <a href="https://ora.ox.ac.uk/objects/uuid:96416d34-2558-4cef-9622-401c7b11490a" class="text-sage underline underline-offset-4" target="_blank" rel="noopener">A cognitive approach to panic</a> », <em>Behaviour Research and Therapy, vol. 24, n° 4, 1986, p. 461-470</em>.</li><li class="text-sm leading-relaxed text-muted-foreground">Alessandro Pompoli, Toshi A. Furukawa, Orestis Efthimiou, Hissei Imai, Aran Tajika et Georgia Salanti, « <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6137372/" class="text-sage underline underline-offset-4" target="_blank" rel="noopener">Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis</a> », <em>Psychological Medicine, vol. 48, n° 12, 2018, p. 1945-1953</em>.</li></ul>
+        <p class="mt-6 text-xs leading-relaxed text-muted-foreground">Cet article a une visée d'information et ne remplace pas une consultation. En cas d'urgence, appelez le 15 ou le 112 ; en cas d'idées suicidaires, le 3114 (gratuit, 24h/24).</p>
+      </aside>
+    </div>
+  </article>
+  <section class="border-t border-border px-6 py-16">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="mb-8 font-serif text-2xl text-sage">Autres articles</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <a href="../blog/anxiete-generalisee.html" class="group flex flex-col justify-between gap-6 rounded-2xl border border-border bg-canvas p-6 transition-all hover:-translate-y-0.5 hover:shadow-xl md:p-8 ">
+          <div>
+            <p class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground"><span class="font-semibold uppercase tracking-widest text-clay">Motif de consultation</span><span>22 octobre 2026</span><span>· 5 min de lecture</span></p>
+            <h3 class="mb-3 text-balance font-serif text-xl text-sage">L&#x27;anxiété généralisée : quand on s&#x27;inquiète de tout, tout le temps</h3>
+            <p class="text-sm leading-relaxed text-muted-foreground line-clamp-4">Un proche qui tarde à rentrer, une facture, un mail resté sans réponse : pour certaines personnes, chaque situation du quotidien devient source d&#x27;inquiétude. Ce que la recherche nous apprend du trouble anxieux généralisé, et ce qui aide à desserrer l&#x27;étau.</p>
+          </div>
+          <span class="flex items-center gap-2 text-sm font-medium text-sage transition-all group-hover:gap-3">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="../blog/haut-potentiel-intellectuel.html" class="group flex flex-col justify-between gap-6 rounded-2xl border border-border bg-canvas p-6 transition-all hover:-translate-y-0.5 hover:shadow-xl md:p-8 ">
+          <div>
+            <p class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground"><span class="font-semibold uppercase tracking-widest text-clay">Bilan psychologique</span><span>21 octobre 2026</span><span>· 5 min de lecture</span></p>
+            <h3 class="mb-3 text-balance font-serif text-xl text-sage">Haut potentiel intellectuel : ce qu&#x27;un bilan peut vraiment dire</h3>
+            <p class="text-sm leading-relaxed text-muted-foreground line-clamp-4">« HPI », « surdoué », « zèbre » : le haut potentiel intellectuel fait l&#x27;objet de nombreux livres et d&#x27;autant d&#x27;idées reçues. Ce que la recherche en dit réellement, et ce qu&#x27;apporte un bilan psychologique bien mené.</p>
+          </div>
+          <span class="flex items-center gap-2 text-sm font-medium text-sage transition-all group-hover:gap-3">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="../blog/hypnose-ce-que-dit-la-science.html" class="group flex flex-col justify-between gap-6 rounded-2xl border border-border bg-canvas p-6 transition-all hover:-translate-y-0.5 hover:shadow-xl md:p-8 ">
+          <div>
+            <p class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground"><span class="font-semibold uppercase tracking-widest text-clay">Approche thérapeutique</span><span>20 octobre 2026</span><span>· 5 min de lecture</span></p>
+            <h3 class="mb-3 text-balance font-serif text-xl text-sage">L&#x27;hypnose en thérapie : ce que dit vraiment la science</h3>
+            <p class="text-sm leading-relaxed text-muted-foreground line-clamp-4">Loin des spectacles où l&#x27;on fait danser des volontaires, l&#x27;hypnose est aussi utilisée à l&#x27;hôpital et en cabinet. En 2015, l&#x27;Inserm a évalué son efficacité pour le ministère de la Santé : voici ce qu&#x27;il en ressort, avec ses promesses et ses limites.</p>
+          </div>
+          <span class="flex items-center gap-2 text-sm font-medium text-sage transition-all group-hover:gap-3">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></div>
+    </div>
+  </section>
+  
+  <section class="px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-sage px-8 py-12 text-sage-foreground md:px-14 md:py-16">
+      <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <div class="max-w-[48ch]">
+          <h2 class="mb-4 text-balance font-serif text-3xl md:text-4xl">Envie d'en parler ?</h2>
+          <p class="text-pretty text-sage-foreground/75">Nous vous orientons vers le psychologue le plus adapté à votre demande, dans l'un des cabinets du réseau en Île-de-France, ou en téléconsultation.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="../rdv.html" class="inline-flex items-center gap-2 rounded-md bg-canvas px-5 py-3 text-sm font-medium text-sage transition-colors hover:bg-canvas/90">Prendre rendez-vous <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="../equipe.html" class="inline-flex items-center rounded-md px-5 py-3 text-sm font-medium text-sage-foreground ring-1 ring-sage-foreground/30 transition-colors hover:bg-sage-foreground/10">Voir l'équipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="border-t border-border bg-secondary/50 px-6 pt-16 pb-10">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <div class="mb-3 font-serif text-2xl text-sage">L'Espace Commun</div>
+          <p class="mb-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">Centre de psychologie</p>
+          <p class="mb-6 font-serif text-sm italic text-clay">Écoute · Bienveillance · Alliance</p>
+          <p class="text-sm leading-relaxed text-muted-foreground">Réseau de psychologues en Île-de-France (75 · 92 · 93 · 94…)<br>Centres : 133 bd Voltaire, 75011 Paris · 1 rue de Benfleet, 93230 Romainville<br>Téléconsultation partout en France</p>
+          <a href="mailto:lespacecommunpsy@gmail.com" class="mt-4 inline-block text-sm text-sage underline underline-offset-4">lespacecommunpsy@gmail.com</a>
+          <a href="../rejoindre.html" class="mt-3 flex w-fit items-center gap-2 text-sm font-medium text-sage">Vous êtes psychologue ? Rejoignez le réseau <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Motifs de consultation</p>
+          <ul class="space-y-2"><li><a href="../troubles/depression-anxiete.html" class="text-sm text-muted-foreground hover:text-sage">Dépression &amp; anxiété</a></li><li><a href="../troubles/tca.html" class="text-sm text-muted-foreground hover:text-sage">Troubles des conduites alimentaires (TCA)</a></li><li><a href="../troubles/tsa.html" class="text-sm text-muted-foreground hover:text-sage">Trouble du spectre de l&#x27;autisme (TSA)</a></li><li><a href="../troubles/tdah.html" class="text-sm text-muted-foreground hover:text-sage">Trouble de l&#x27;attention avec ou sans hyperactivité (TDAH)</a></li><li><a href="../troubles/confiance-en-soi.html" class="text-sm text-muted-foreground hover:text-sage">Confiance en soi</a></li><li><a href="../troubles/travail-sur-soi.html" class="text-sm text-muted-foreground hover:text-sage">Démarrer un travail sur soi</a></li><li><a href="../troubles/addictions.html" class="text-sm text-muted-foreground hover:text-sage">Addictions</a></li><li><a href="../troubles/perinatalite.html" class="text-sm text-muted-foreground hover:text-sage">Périnatalité</a></li><li><a href="../troubles/obesite.html" class="text-sm text-muted-foreground hover:text-sage">Obésité</a></li><li><a href="../troubles/maladies-chroniques.html" class="text-sm text-muted-foreground hover:text-sage">Maladies chroniques</a></li><li><a href="../troubles/souffrance-au-travail.html" class="text-sm text-muted-foreground hover:text-sage">Burn-out &amp; travail</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Approches</p>
+          <ul class="space-y-2"><li><a href="../approches/tcc.html" class="text-sm text-muted-foreground hover:text-sage">TCC</a></li><li><a href="../approches/psychanalyse.html" class="text-sm text-muted-foreground hover:text-sage">Psychanalyse</a></li><li><a href="../approches/emdr.html" class="text-sm text-muted-foreground hover:text-sage">EMDR</a></li><li><a href="../approches/hypnotherapie.html" class="text-sm text-muted-foreground hover:text-sage">Hypnothérapie</a></li><li><a href="../approches/icv.html" class="text-sm text-muted-foreground hover:text-sage">Intégration du Cycle de la Vie (ICV)</a></li><li><a href="../approches/therapie-breve.html" class="text-sm text-muted-foreground hover:text-sage">Thérapie brève</a></li><li><a href="../approches/systemique.html" class="text-sm text-muted-foreground hover:text-sage">Systémique</a></li></ul>
+        </div>
+        
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-wider text-clay">Bilans</p>
+          <ul class="space-y-2"><li><a href="../bilans/wisc-v.html" class="text-sm text-muted-foreground hover:text-sage">WISC-V · enfant</a></li><li><a href="../bilans/wais-v.html" class="text-sm text-muted-foreground hover:text-sage">WAIS-V · adulte</a></li><li><a href="../bilans/bilans-projectifs.html" class="text-sm text-muted-foreground hover:text-sage">Bilans projectifs</a></li></ul>
+        </div>
+      </div>
+      <div class="mt-12 rounded-xl border border-border bg-canvas p-5 text-sm leading-relaxed text-muted-foreground">
+        <strong class="font-medium text-foreground">En cas d'urgence vitale</strong>, appelez le <strong class="text-foreground">15</strong> ou le <strong class="text-foreground">112</strong>. Si vous avez des idées suicidaires ou êtes inquiet pour un proche : <strong class="text-foreground">3114</strong>, numéro national de prévention du suicide, gratuit, 24h/24. L'Espace Commun ne prend pas en charge les situations de crise : <a href="../urgences.html" class="font-medium text-sage underline underline-offset-4">voir les contacts d'urgence</a>.
+      </div>
+      <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-wider text-muted-foreground sm:flex-row">
+        <span>© <span data-annee>2026</span> L'Espace Commun</span>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3"><a href="../infos.html#confidentialite" class="hover:text-sage">Confidentialité</a><button type="button" data-gerer-cookies class="uppercase tracking-wider hover:text-sage">Cookies</button><a href="../equipe.html" class="hover:text-sage">L'équipe</a><a href="../rdv.html" class="hover:text-sage">Rendez-vous</a><a href="../blog/index.html" class="hover:text-sage">Blog</a><a href="../rejoindre.html" class="hover:text-sage">Psychologues : rejoindre le réseau</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div id="bandeau-cookies" hidden role="dialog" aria-label="Mesure d'audience" class="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-xl rounded-2xl border border-border bg-canvas p-5 shadow-2xl sm:inset-x-6 sm:bottom-6">
+  <p class="mb-1 font-serif text-lg text-sage">Votre accord pour mesurer l'audience</p>
+  <p class="mb-4 text-xs leading-relaxed text-muted-foreground">Avec votre accord, nous utilisons Google Analytics pour savoir combien de personnes consultent le site et quelles pages sont utiles. Aucune donnée n'est utilisée à des fins publicitaires. Vous pouvez changer d'avis à tout moment via « Cookies » en bas de page. <a href="../infos.html#confidentialite" class="underline">En savoir plus</a></p>
+  <div class="grid grid-cols-2 gap-2">
+    <button type="button" data-cookies="non" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap px-4 py-2 text-sm font-medium text-sage ring-1 ring-border transition-colors hover:bg-secondary py-2.5">Refuser</button>
+    <button type="button" data-cookies="oui" class="inline-flex items-center justify-center text-center rounded-md sm:whitespace-nowrap bg-sage px-4 py-2 text-sm font-medium text-sage-foreground shadow-sm ring-1 ring-sage transition-colors hover:bg-sage/90 py-2.5">Accepter</button>
+  </div>
+</div>
+<script src="../assets/site.js"></script>
+<script src="../assets/mesure.js" data-ga="G-H59D9KR0ZG"></script>
+</body>
+</html>
