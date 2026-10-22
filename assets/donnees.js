@@ -211,6 +211,15 @@ window.EC = {
     "wisc-v",
     "wais-v"
    ]
+  },
+  "zoe": {
+   "nom": "Zoé Yildiz",
+   "liens": {},
+   "slugs": [
+    "souffrance-au-travail",
+    "depression-anxiete",
+    "confiance-en-soi"
+   ]
   }
  },
  "tarifs": {
