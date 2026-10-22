@@ -71,6 +71,11 @@ window.EC = {
    "lien": "troubles/vieillissement.html",
    "type": "trouble"
   },
+  "troubles-comportement": {
+   "libelle": "Troubles du comportement (enfant & ado)",
+   "lien": "troubles/troubles-comportement.html",
+   "type": "trouble"
+  },
   "wisc-v": {
    "libelle": "Bilan WISC-V · enfant",
    "lien": "bilans/wisc-v.html",
@@ -129,6 +134,11 @@ window.EC = {
   "coaching": {
    "libelle": "Coaching psychologique",
    "lien": "approches/coaching.html",
+   "type": "approche"
+  },
+  "integrative": {
+   "libelle": "Approche intégrative",
+   "lien": "approches/integrative.html",
    "type": "approche"
   },
   "orientation": {
@@ -193,9 +203,13 @@ window.EC = {
    "nom": "Rahma Badra",
    "liens": {},
    "slugs": [
+    "troubles-comportement",
     "tsa",
     "tdah",
-    "confiance-en-soi"
+    "confiance-en-soi",
+    "integrative",
+    "wisc-v",
+    "wais-v"
    ]
   }
  },
