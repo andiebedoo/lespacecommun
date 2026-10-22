@@ -211,11 +211,13 @@ window.EC = {
   "adresses": {
    "paris": "133 boulevard Voltaire, 75011 Paris · Interphone : Espace Commun · Métro Voltaire",
    "romainville": "1 rue de Benfleet, 93230 Romainville · RDC, accès PMR · Métro Mairie de Romainville",
+   "vitry": "100 avenue Rouget de Lisle, 94400 Vitry-sur-Seine",
    "domicile": "À votre domicile, en Île-de-France · frais de déplacement à votre charge, en plus de la séance"
   },
   "lieux": {
    "paris": "Paris 11",
    "romainville": "Romainville",
+   "vitry": "Vitry-sur-Seine",
    "idf": "Autre cabinet en Île-de-France",
    "domicile": "À domicile (Île-de-France)",
    "visio": "Téléconsultation"
