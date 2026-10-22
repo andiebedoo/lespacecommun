@@ -39,6 +39,8 @@ function lireRdv(params) {
     p: psys[params.get('p')] ? params.get('p') : '',
     r: params.get('r') === '1',
     a: (params.get('a') || '').slice(0, 160),
+    // f : frais de déplacement d'une séance à domicile (montants fixés par le site)
+    f: params.get('l') === 'domicile' && paiement.deplacement[params.get('f')] ? Number(params.get('f')) : 0,
     n: FORMAT_REF.test(params.get('n') || '') ? params.get('n') : '',
   };
 }
@@ -73,7 +75,7 @@ function texteRdv(rdv) {
     seance: rdv.t === 'bilan' ? type.libelle : `${type.libelle} · ${type.duree} min`,
     lieu: paiement.lieux[rdv.l],
     adresse,
-    montant: `${montant(rdv)} €${reduit(rdv) ? ' (tarif réduit)' : ''}${rdv.l === 'domicile' ? ' + frais de déplacement' : ''}`,
+    montant: `${montant(rdv)} €${reduit(rdv) ? ' (tarif réduit)' : ''}${rdv.l === 'domicile' ? (rdv.f ? ` + ${rdv.f} € de déplacement (total ${montant(rdv) + rdv.f} €)` : ' + frais de déplacement') : ''}`,
   };
 }
 

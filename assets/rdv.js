@@ -101,9 +101,9 @@ function tarif() {
   const bilan = (motifs[$('champ-motif').value] || {}).type === 'bilan'; // pas de réduction sur les bilans
   if (!bilan && form.querySelector('input[name="tarif jeunes"]').checked) {
     const reduit = Math.round(parseInt(prix, 10) * (1 - tarifs.reduction / 100));
-    return `${reduit} € · tarif réduit −${tarifs.reduction} %${domicile() ? ' + déplacement' : ''}`;
+    return `${reduit} € · tarif réduit −${tarifs.reduction} %${domicile() ? ' + déplacement (15 € Paris, 25 € petite couronne)' : ''}`;
   }
-  return `${prix} · ${detail}${domicile() ? ' + déplacement' : ''}`;
+  return `${prix} · ${detail}${domicile() ? ' + déplacement (15 € Paris, 25 € petite couronne)' : ''}`;
 }
 
 function majRecap() {

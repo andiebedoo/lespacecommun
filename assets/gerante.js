@@ -39,11 +39,13 @@ function lienPatient() {
   ['d', 'h', 'l', 'p', 't'].forEach((k) => q.set(k, champ(k).value));
   q.set('r', champ('r').checked ? '1' : '0');
   if (champ('l').value === 'idf' && champ('a').value.trim()) q.set('a', champ('a').value.trim());
+  if (champ('l').value === 'domicile') q.set('f', champ('f').value);
   return { q, url: `${paiement.site}/paiement.html?${q.toString()}` };
 }
 
 function mettreAJour() {
   document.getElementById('g-adresse').hidden = champ('l').value !== 'idf';
+  document.getElementById('g-deplacement').hidden = champ('l').value !== 'domicile';
   const bilan = champ('t').value === 'bilan'; // pas de réduction sur les bilans
   champ('r').disabled = bilan;
   if (bilan) champ('r').checked = false;
@@ -66,7 +68,7 @@ function mettreAJour() {
   if (rdv.l !== 'visio') {
     const ou = rdv.l === 'domicile' ? 'à votre domicile (les frais de déplacement, à votre charge, s\'ajoutent au tarif de la séance)' : 'au cabinet';
     reglement = `Le règlement se fait directement auprès ${deNom(qui)}, le jour de la séance, ${ou} : en espèces ou par carte.`;
-    alerte.textContent = rdv.l === 'domicile' ? 'Séance à domicile : indiquez au patient le montant des frais de déplacement, réglés au psychologue avec la séance.' : 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
+    alerte.textContent = rdv.l === 'domicile' ? 'Séance à domicile : les frais de déplacement choisis sont ajoutés au montant dans l\'email et la page du patient.' : 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
   } else if (enLigne) {
     reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte, via le lien de paiement sécurisé de la page ci-dessous.`;
     alerte.textContent = 'Téléconsultation : paiement par carte via le lien du psychologue.';

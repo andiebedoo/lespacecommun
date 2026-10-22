@@ -234,16 +234,26 @@ window.EC = {
   "adresses": {
    "paris": "133 boulevard Voltaire, 75011 Paris · Interphone : Espace Commun · Métro Voltaire",
    "romainville": "1 rue de Benfleet, 93230 Romainville · RDC, accès PMR · Métro Mairie de Romainville",
+   "paris13": "18 rue Pinel, 75013 Paris",
+   "paris14": "9 avenue René Coty, 75014 Paris",
+   "paris15": "10 rue du Laos, 75015 Paris",
    "vitry": "100 avenue Rouget de Lisle, 94400 Vitry-sur-Seine",
-   "domicile": "À votre domicile, en Île-de-France · frais de déplacement à votre charge, en plus de la séance"
+   "domicile": "À votre domicile (adresse convenue lors de la prise de rendez-vous)"
   },
   "lieux": {
    "paris": "Paris 11",
+   "paris13": "Paris 13",
+   "paris14": "Paris 14",
+   "paris15": "Paris 15",
    "romainville": "Romainville",
    "vitry": "Vitry-sur-Seine",
    "idf": "Autre cabinet en Île-de-France",
    "domicile": "À domicile (Île-de-France)",
    "visio": "Téléconsultation"
+  },
+  "deplacement": {
+   "15": "Paris",
+   "25": "petite couronne (92, 93, 94)"
   },
   "site": "https://lespacecommun.fr",
   "email": "lespacecommunpsy@gmail.com",
