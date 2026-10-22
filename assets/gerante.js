@@ -64,8 +64,9 @@ function mettreAJour() {
   const qui = rdv.p ? t.psy : 'votre psychologue';
   let reglement;
   if (rdv.l !== 'visio') {
-    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, le jour de la séance, au cabinet : en espèces ou par carte.`;
-    alerte.textContent = 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
+    const ou = rdv.l === 'domicile' ? 'à votre domicile (les frais de déplacement, à votre charge, s\'ajoutent au tarif de la séance)' : 'au cabinet';
+    reglement = `Le règlement se fait directement auprès ${deNom(qui)}, le jour de la séance, ${ou} : en espèces ou par carte.`;
+    alerte.textContent = rdv.l === 'domicile' ? 'Séance à domicile : indiquez au patient le montant des frais de déplacement, réglés au psychologue avec la séance.' : 'Paiement au cabinet : espèces ou carte, directement au psychologue.';
   } else if (enLigne) {
     reglement = `Le règlement se fait directement auprès ${deNom(qui)}, par carte, via le lien de paiement sécurisé de la page ci-dessous.`;
     alerte.textContent = 'Téléconsultation : paiement par carte via le lien du psychologue.';

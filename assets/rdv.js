@@ -93,14 +93,17 @@ function tarifDeBase() {
   return [tarifs.consultation, '45 min'];
 }
 
+// Consultation à domicile : frais de déplacement en plus, à la charge du patient.
+const domicile = () => Boolean(form.querySelector('input[data-lieu="domicile"]:checked'));
+
 function tarif() {
   const [prix, detail] = tarifDeBase();
   const bilan = (motifs[$('champ-motif').value] || {}).type === 'bilan'; // pas de réduction sur les bilans
   if (!bilan && form.querySelector('input[name="tarif jeunes"]').checked) {
     const reduit = Math.round(parseInt(prix, 10) * (1 - tarifs.reduction / 100));
-    return `${reduit} € · tarif réduit −${tarifs.reduction} %`;
+    return `${reduit} € · tarif réduit −${tarifs.reduction} %${domicile() ? ' + déplacement' : ''}`;
   }
-  return `${prix} · ${detail}`;
+  return `${prix} · ${detail}${domicile() ? ' + déplacement' : ''}`;
 }
 
 function majRecap() {
@@ -108,6 +111,7 @@ function majRecap() {
   $('r-motif').textContent = motif ? motif.libelle : '—';
   $('r-psy').textContent = valeurRadio('praticien') || 'Sans préférence';
   $('r-lieu').textContent = valeurRadio('lieu') || '—';
+  $('note-domicile').hidden = !domicile();
   const creneau = jourChoisi && heureChoisie !== null
     ? `${fmtJour.format(jourChoisi)} à ${heureChoisie} h` : '—';
   $('r-creneau').textContent = creneau;
@@ -169,7 +173,7 @@ form.addEventListener('submit', async (ev) => {
   const urgence = $('champ-motif').value === 'urgence';
   let manque = '';
   if (!$('champ-motif').value) manque = 'Choisissez un motif de consultation.';
-  else if (!valeurRadio('lieu')) manque = 'Choisissez un lieu : Paris 11, Romainville ou téléconsultation.';
+  else if (!valeurRadio('lieu')) manque = 'Choisissez un lieu : cabinet, domicile ou téléconsultation.';
   else if (!urgence && (!jourChoisi || heureChoisie === null)) manque = 'Choisissez un jour et un horaire.';
   else if (!$('champ-tel').value.trim() && !$('champ-email').value.trim()) manque = 'Indiquez votre numéro de mobile et/ou votre email : c\'est là que vous recevrez la confirmation du rendez-vous.';
   else if (!form.checkValidity()) manque = 'Complétez vos coordonnées et acceptez d\'être recontacté.';

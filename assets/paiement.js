@@ -73,7 +73,7 @@ function texteRdv(rdv) {
     seance: rdv.t === 'bilan' ? type.libelle : `${type.libelle} · ${type.duree} min`,
     lieu: paiement.lieux[rdv.l],
     adresse,
-    montant: `${montant(rdv)} €${reduit(rdv) ? ' (tarif réduit)' : ''}`,
+    montant: `${montant(rdv)} €${reduit(rdv) ? ' (tarif réduit)' : ''}${rdv.l === 'domicile' ? ' + frais de déplacement' : ''}`,
   };
 }
 
@@ -158,7 +158,8 @@ if (document.getElementById('p-contenu')) {
       }
     } else {
       ecrire('p-surplace-titre', 'Payer le jour de la séance');
-      ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, au cabinet, en espèces ou par carte. Rien d'autre à faire d'ici là.`);
+      const ou = rdv.l === 'domicile' ? 'lors de sa venue, avec ses frais de déplacement' : 'au cabinet';
+      ecrire('p-surplace-texte', `Directement auprès ${deNom(qui)}, ${ou}, en espèces ou par carte. Rien d'autre à faire d'ici là.`);
       document.getElementById('p-surplace').hidden = false;
     }
     document.getElementById('p-agenda').addEventListener('click', () => fichierAgenda(rdv));
