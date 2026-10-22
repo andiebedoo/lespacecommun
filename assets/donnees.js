@@ -188,6 +188,15 @@ window.EC = {
     "stimulation-cognitive",
     "coaching"
    ]
+  },
+  "rahma": {
+   "nom": "Rahma Badra",
+   "liens": {},
+   "slugs": [
+    "tsa",
+    "tdah",
+    "confiance-en-soi"
+   ]
   }
  },
  "tarifs": {
