@@ -56,6 +56,21 @@ window.EC = {
    "lien": "troubles/souffrance-au-travail.html",
    "type": "trouble"
   },
+  "traumatismes": {
+   "libelle": "Traumatismes de vie",
+   "lien": "troubles/traumatismes.html",
+   "type": "trouble"
+  },
+  "sexualite": {
+   "libelle": "Sexualité & vie intime",
+   "lien": "troubles/sexualite.html",
+   "type": "trouble"
+  },
+  "vieillissement": {
+   "libelle": "Vieillissement & troubles liés à l'âge",
+   "lien": "troubles/vieillissement.html",
+   "type": "trouble"
+  },
   "wisc-v": {
    "libelle": "Bilan WISC-V · enfant",
    "lien": "bilans/wisc-v.html",
@@ -106,6 +121,16 @@ window.EC = {
    "lien": "approches/systemique.html",
    "type": "approche"
   },
+  "stimulation-cognitive": {
+   "libelle": "Stimulation cognitive",
+   "lien": "approches/stimulation-cognitive.html",
+   "type": "approche"
+  },
+  "coaching": {
+   "libelle": "Coaching psychologique",
+   "lien": "approches/coaching.html",
+   "type": "approche"
+  },
   "orientation": {
    "libelle": "Orientation",
    "type": "autre"
@@ -154,9 +179,14 @@ window.EC = {
    "nom": "Laura Jess",
    "liens": {},
    "slugs": [
+    "traumatismes",
+    "sexualite",
+    "vieillissement",
     "addictions",
     "depression-anxiete",
-    "hypnotherapie"
+    "hypnotherapie",
+    "stimulation-cognitive",
+    "coaching"
    ]
   }
  },
