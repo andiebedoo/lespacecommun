@@ -208,8 +208,7 @@ window.EC = {
     "tdah",
     "confiance-en-soi",
     "integrative",
-    "wisc-v",
-    "wais-v"
+    "wisc-v"
    ]
   },
   "zoe": {
