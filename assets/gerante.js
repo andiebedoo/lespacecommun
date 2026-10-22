@@ -99,7 +99,7 @@ function mettreAJour() {
     '',
     'Bien à vous,',
     paiement.gerante,
-    'Gérante — L\'Espace Commun',
+    'Fondatrice — L\'Espace Commun',
     paiement.email,
   ].join('\n');
   document.getElementById('g-email').value = email;
