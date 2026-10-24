@@ -124,11 +124,26 @@ function majRecap() {
 function majMotif() {
   const cle = $('champ-motif').value;
   const motif = motifs[cle];
-  // Met en avant les praticiens qui accompagnent ce motif
-  Object.entries(psys).forEach(([id, p]) => {
+  // N'affiche que les praticiens qui accompagnent ce motif (tous pour « orientation », « urgence », « autre »
+  // ou si aucun ne correspond). « Sans préférence » reste toujours proposé.
+  const general = !cle || ['orientation', 'urgence', 'autre'].includes(cle);
+  const adaptes = Object.keys(psys).filter((id) => psys[id].slugs.includes(cle));
+  const tous = general;
+  Object.keys(psys).forEach((id) => {
+    const r = form.querySelector(`input[data-psy="${id}"]`);
+    if (!r) return;
+    const visible = tous || adaptes.includes(id);
+    r.closest('label').style.display = visible ? '' : 'none';
+    if (!visible && r.checked) {
+      r.checked = false;
+      form.querySelector('input[name="praticien"][value="Sans préférence"]').checked = true;
+    }
     const badge = form.querySelector(`[data-reco="${id}"]`);
-    if (badge) badge.hidden = !p.slugs.includes(cle);
+    if (badge) badge.hidden = tous;
   });
+  $('note-psys').textContent = tous ? '' : !adaptes.length ? `Aucun psychologue présenté sur le site ne propose encore ce motif : choisissez « Sans préférence », ${(window.EC.paiement.gerante || 'la fondatrice').split(' ')[0]} vous orientera vers un professionnel adapté.` : `${adaptes.length} psychologue${adaptes.length > 1 ? 's du réseau accompagnent' : ' du réseau accompagne'} ce motif. Vous pouvez aussi choisir « Sans préférence ».`;
+  $('note-psys').hidden = tous;
+  if (typeof majLieux === 'function') majLieux();
   const lien = $('lien-motif');
   if (motif && motif.lien) {
     lien.innerHTML = `Pour mieux comprendre : <a href="${motif.lien}" class="text-sage underline underline-offset-4" target="_blank">lire la page ${motif.libelle}</a>`;
