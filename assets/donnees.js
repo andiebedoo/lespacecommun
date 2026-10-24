@@ -276,7 +276,7 @@ window.EC = {
   },
   "deplacement": {
    "15": "Paris",
-   "25": "petite couronne (92, 93, 94)"
+   "25": "petite couronne"
   },
   "site": "https://lespacecommun.fr",
   "email": "lespacecommunpsy@gmail.com",
