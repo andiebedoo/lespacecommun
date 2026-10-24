@@ -157,6 +157,10 @@ window.EC = {
  "psys": {
   "andie": {
    "nom": "Andie Bedoucha",
+   "lieux": [
+    "paris",
+    "visio"
+   ],
    "liens": {
     "95": "https://checkout.revolut.com/pay/fcf0bd7e-d66f-4667-9dce-20e3c846b4b4",
     "120": "https://checkout.revolut.com/pay/4b23b6ac-7ac6-4453-864f-8101076405cd",
@@ -175,6 +179,11 @@ window.EC = {
   },
   "viva": {
    "nom": "Viva Tavlitzki",
+   "lieux": [
+    "paris",
+    "romainville",
+    "visio"
+   ],
    "liens": {},
    "slugs": [
     "maladies-chroniques",
@@ -187,6 +196,13 @@ window.EC = {
   },
   "laura": {
    "nom": "Laura Jess",
+   "lieux": [
+    "paris13",
+    "paris14",
+    "paris15",
+    "domicile",
+    "visio"
+   ],
    "liens": {},
    "slugs": [
     "traumatismes",
@@ -201,6 +217,10 @@ window.EC = {
   },
   "rahma": {
    "nom": "Rahma Badra",
+   "lieux": [
+    "vitry",
+    "visio"
+   ],
    "liens": {},
    "slugs": [
     "troubles-comportement",
@@ -213,6 +233,10 @@ window.EC = {
   },
   "zoe": {
    "nom": "Zoé Yildiz",
+   "lieux": [
+    "romainville",
+    "visio"
+   ],
    "liens": {},
    "slugs": [
     "souffrance-au-travail",

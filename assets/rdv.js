@@ -154,6 +154,23 @@ if (params.get('lieu')) {
   if (r) r.checked = true;
 }
 
+// Lieux proposés : seulement ceux du psychologue choisi (tous si « Sans préférence »).
+function majLieux() {
+  const choisi = form.querySelector('input[name="praticien"]:checked');
+  const psy = choisi && psys[choisi.dataset.psy];
+  form.querySelectorAll('input[data-lieu]').forEach((r) => {
+    const propose = !psy || psy.lieux.includes(r.dataset.lieu);
+    r.closest('label').style.display = propose ? '' : 'none';
+    r.disabled = !propose;
+    if (!propose && r.checked) r.checked = false;
+  });
+  const lieux = psy ? psy.lieux.length : 0;
+  $('note-lieux').textContent = psy ? `${choisi.value} consulte ${lieux > 1 ? 'dans ces lieux' : 'à cet endroit'}. Pour voir tous les lieux du réseau, choisissez « Sans préférence ».` : '';
+  $('note-lieux').hidden = !psy;
+}
+form.querySelectorAll('input[name="praticien"]').forEach((r) => r.addEventListener('change', () => { majLieux(); majRecap(); }));
+majLieux();
+
 $('jours-prec').addEventListener('click', () => { decalage = Math.max(0, decalage - JOURS_VISIBLES); dessinerJours(); });
 $('jours-suiv').addEventListener('click', () => { decalage += JOURS_VISIBLES; dessinerJours(); });
 $('champ-motif').addEventListener('change', majMotif);
