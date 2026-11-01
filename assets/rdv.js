@@ -141,7 +141,7 @@ function majMotif() {
     const badge = form.querySelector(`[data-reco="${id}"]`);
     if (badge) badge.hidden = tous;
   });
-  $('note-psys').textContent = tous ? '' : !adaptes.length ? `Aucun psychologue présenté sur le site ne propose encore ce motif : choisissez « Sans préférence », ${(window.EC.paiement.gerante || 'la fondatrice').split(' ')[0]} vous orientera vers un professionnel adapté.` : `${adaptes.length} psychologue${adaptes.length > 1 ? 's du réseau accompagnent' : ' du réseau accompagne'} ce motif. Vous pouvez aussi choisir « Sans préférence ».`;
+  $('note-psys').textContent = tous ? '' : !adaptes.length ? `Aucun psychologue présenté sur le site ne propose encore ce motif, mais d'autres psychologues du réseau peuvent vous recevoir : choisissez « Sans préférence », nous vous recontactons pour vous proposer un rendez-vous près de chez vous ou en téléconsultation.` : `${adaptes.length} psychologue${adaptes.length > 1 ? 's du réseau accompagnent' : ' du réseau accompagne'} ce motif. Vous pouvez aussi choisir « Sans préférence ».`;
   $('note-psys').hidden = tous;
   if (typeof majLieux === 'function') majLieux();
   const lien = $('lien-motif');
