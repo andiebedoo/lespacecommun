@@ -152,6 +152,11 @@ window.EC = {
   "autre": {
    "libelle": "Autre demande",
    "type": "autre"
+  },
+  "entreprise": {
+   "libelle": "Intervention en entreprise",
+   "lien": "entreprises.html",
+   "type": "autre"
   }
  },
  "psys": {
@@ -172,7 +177,8 @@ window.EC = {
     "psychanalyse",
     "orientation",
     "urgence",
-    "autre"
+    "autre",
+    "entreprise"
    ]
   },
   "viva": {
@@ -239,7 +245,8 @@ window.EC = {
    "slugs": [
     "souffrance-au-travail",
     "depression-anxiete",
-    "confiance-en-soi"
+    "confiance-en-soi",
+    "entreprise"
    ]
   }
  },
