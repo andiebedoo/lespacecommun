@@ -66,6 +66,11 @@ window.EC = {
    "lien": "troubles/sexualite.html",
    "type": "trouble"
   },
+  "therapie-de-couple": {
+   "libelle": "Couple",
+   "lien": "troubles/therapie-de-couple.html",
+   "type": "trouble"
+  },
   "vieillissement": {
    "libelle": "Vieillissement & troubles liés à l'âge",
    "lien": "troubles/vieillissement.html",
@@ -192,6 +197,7 @@ window.EC = {
    "slugs": [
     "maladies-chroniques",
     "depression-anxiete",
+    "therapie-de-couple",
     "psychanalyse",
     "wisc-v",
     "wais-v",
@@ -211,6 +217,7 @@ window.EC = {
    "slugs": [
     "traumatismes",
     "sexualite",
+    "therapie-de-couple",
     "vieillissement",
     "addictions",
     "depression-anxiete",
