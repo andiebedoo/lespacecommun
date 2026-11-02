@@ -106,7 +106,7 @@ window.EC = {
    "libelle": "Bilan de compétences",
    "lien": "bilans/bilan-de-competences.html",
    "type": "bilan",
-   "tarif": "1 800 €"
+   "tarif": "1 990 €"
   },
   "tcc": {
    "libelle": "TCC",
@@ -278,7 +278,7 @@ window.EC = {
   "emdr": "100 €",
   "bilan": "350 €",
   "personnalite": "210 €",
-  "competences": "1 800 €"
+  "competences": "1 990 €"
  },
  "paiement": {
   "adresses": {
