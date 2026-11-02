@@ -2,7 +2,7 @@
 // Le lien envoyé au patient décrit la séance, sans aucune donnée personnelle :
 //   paiement.html?n=EC-2610-7KQ3&d=2026-10-20&h=10:00&l=paris&p=andie&t=adulte&r=0&a=
 // n : numéro de réservation (sert aussi à la facturation des psychologues, sans nom de patient),
-// d : date, h : heure, l : lieu, p : psychologue, t : type (adulte|enfant|emdr|bilan),
+// d : date, h : heure, l : lieu, p : psychologue, t : type (adulte|enfant|emdr|bilan|personnalite|competences),
 // r : 1 si tarif réduit 18 – 25 ans (jamais appliqué aux bilans), a : adresse du cabinet (lieu « idf »).
 // Le montant est recalculé ici à partir des tarifs du site, jamais lu dans le lien.
 
@@ -14,6 +14,8 @@ const TYPES = {
   enfant: { libelle: 'Consultation enfant', duree: 40 },
   emdr: { libelle: 'Séance d\'EMDR', duree: 45 },
   bilan: { libelle: 'Bilan psychologique complet', duree: 60 },
+  personnalite: { libelle: 'Tests de personnalité', duree: 60, bilan: true },
+  competences: { libelle: 'Bilan de compétences', duree: 60, bilan: true },
 };
 
 // EC-AAMM-XXXX : année et mois du RDV, puis 4 caractères sans ambiguïté (ni 0/O, ni 1/I).
@@ -46,14 +48,16 @@ function lireRdv(params) {
 }
 
 // Réduction jeunes adultes : jamais sur les bilans.
-const reduit = (rdv) => rdv.r && rdv.t !== 'bilan';
+const estBilan = (t) => t === 'bilan' || Boolean(TYPES[t] && TYPES[t].bilan);
+const reduit = (rdv) => rdv.r && !estBilan(rdv.t);
 
 // Même règle que la prise de RDV : bilan, puis tarif soir / week-end, puis type de séance.
 function montant(rdv) {
   const jourSemaine = rdv.debut.getDay();
   const majore = rdv.debut.getHours() >= 20 || jourSemaine === 0 || jourSemaine === 6;
   let base;
-  if (rdv.t === 'bilan') base = euros(tarifs.bilan);
+  if (rdv.t === 'personnalite' || rdv.t === 'competences') base = euros(tarifs[rdv.t].replace(/\s/g, ''));
+  else if (rdv.t === 'bilan') base = euros(tarifs.bilan);
   else if (majore) base = euros(tarifs.majore);
   else if (rdv.t === 'emdr') base = euros(tarifs.emdr);
   else if (rdv.t === 'enfant') base = euros(tarifs.enfant);
@@ -72,7 +76,7 @@ function texteRdv(rdv) {
     date,
     heure,
     psy: rdv.p ? psys[rdv.p].nom : 'Votre psychologue',
-    seance: rdv.t === 'bilan' ? type.libelle : `${type.libelle} · ${type.duree} min`,
+    seance: estBilan(rdv.t) ? type.libelle : `${type.libelle} · ${type.duree} min`,
     lieu: paiement.lieux[rdv.l],
     adresse,
     montant: `${montant(rdv)} €${reduit(rdv) ? ' (tarif réduit)' : ''}${rdv.l === 'domicile' ? (rdv.f ? ` + ${rdv.f} € de déplacement (total ${montant(rdv) + rdv.f} €)` : ' + frais de déplacement') : ''}`,

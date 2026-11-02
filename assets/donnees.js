@@ -99,12 +99,14 @@ window.EC = {
   "tests-de-personnalite": {
    "libelle": "Tests de personnalité",
    "lien": "bilans/tests-de-personnalite.html",
-   "type": "bilan"
+   "type": "bilan",
+   "tarif": "210 €"
   },
   "bilan-de-competences": {
    "libelle": "Bilan de compétences",
    "lien": "bilans/bilan-de-competences.html",
-   "type": "bilan"
+   "type": "bilan",
+   "tarif": "1 800 €"
   },
   "tcc": {
    "libelle": "TCC",
@@ -274,7 +276,9 @@ window.EC = {
   "majore": "120 €",
   "reduction": 10,
   "emdr": "100 €",
-  "bilan": "350 €"
+  "bilan": "350 €",
+  "personnalite": "210 €",
+  "competences": "1 800 €"
  },
  "paiement": {
   "adresses": {

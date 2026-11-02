@@ -86,7 +86,7 @@ function valeurRadio(nom) {
 function tarifDeBase() {
   const cle = $('champ-motif').value;
   const motif = motifs[cle];
-  if (motif && motif.type === 'bilan') return [tarifs.bilan, 'le bilan complet'];
+  if (motif && motif.type === 'bilan') return [motif.tarif || tarifs.bilan, 'le bilan complet'];
   if (jourChoisi && heureChoisie !== null && majore(jourChoisi, heureChoisie)) return [tarifs.majore, 'soir / week-end'];
   if (cle === 'emdr') return [tarifs.emdr, 'la séance'];
   if (valeurRadio('pour qui') === 'Pour mon enfant') return [tarifs.enfant, '40 min'];

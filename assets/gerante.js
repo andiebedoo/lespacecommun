@@ -46,7 +46,7 @@ function lienPatient() {
 function mettreAJour() {
   document.getElementById('g-adresse').hidden = champ('l').value !== 'idf';
   document.getElementById('g-deplacement').hidden = champ('l').value !== 'domicile';
-  const bilan = champ('t').value === 'bilan'; // pas de réduction sur les bilans
+  const bilan = ['bilan', 'personnalite', 'competences'].includes(champ('t').value); // pas de réduction sur les bilans
   champ('r').disabled = bilan;
   if (bilan) champ('r').checked = false;
   const { q, url } = lienPatient();
