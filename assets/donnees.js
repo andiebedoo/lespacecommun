@@ -92,17 +92,17 @@ window.EC = {
    "type": "bilan"
   },
   "bilans-projectifs": {
-   "libelle": "Bilan Bilans projectifs",
+   "libelle": "Bilans projectifs",
    "lien": "bilans/bilans-projectifs.html",
    "type": "bilan"
   },
   "tests-de-personnalite": {
-   "libelle": "Bilan Tests de personnalité",
+   "libelle": "Tests de personnalité",
    "lien": "bilans/tests-de-personnalite.html",
    "type": "bilan"
   },
   "bilan-de-competences": {
-   "libelle": "Bilan Bilan de compétences",
+   "libelle": "Bilan de compétences",
    "lien": "bilans/bilan-de-competences.html",
    "type": "bilan"
   },
@@ -191,7 +191,6 @@ window.EC = {
     "souffrance-au-travail",
     "psychanalyse",
     "tests-de-personnalite",
-    "bilan-de-competences",
     "orientation",
     "urgence",
     "autre",
