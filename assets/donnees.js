@@ -96,6 +96,16 @@ window.EC = {
    "lien": "bilans/bilans-projectifs.html",
    "type": "bilan"
   },
+  "tests-de-personnalite": {
+   "libelle": "Bilan Tests de personnalité",
+   "lien": "bilans/tests-de-personnalite.html",
+   "type": "bilan"
+  },
+  "bilan-de-competences": {
+   "libelle": "Bilan Bilan de compétences",
+   "lien": "bilans/bilan-de-competences.html",
+   "type": "bilan"
+  },
   "tcc": {
    "libelle": "TCC",
    "lien": "approches/tcc.html",
@@ -180,6 +190,8 @@ window.EC = {
     "travail-sur-soi",
     "souffrance-au-travail",
     "psychanalyse",
+    "tests-de-personnalite",
+    "bilan-de-competences",
     "orientation",
     "urgence",
     "autre",
