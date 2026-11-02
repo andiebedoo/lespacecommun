@@ -163,9 +163,7 @@ window.EC = {
    ],
    "liens": {
     "95": "https://checkout.revolut.com/pay/fcf0bd7e-d66f-4667-9dce-20e3c846b4b4",
-    "120": "https://checkout.revolut.com/pay/4b23b6ac-7ac6-4453-864f-8101076405cd",
-    "76": "https://checkout.revolut.com/pay/02320a61-fca5-42cd-bed9-ed5383aeb5d4",
-    "96": "https://checkout.revolut.com/pay/68341e16-4123-44ed-9dc4-5f099d680817"
+    "120": "https://checkout.revolut.com/pay/4b23b6ac-7ac6-4453-864f-8101076405cd"
    },
    "slugs": [
     "confiance-en-soi",
@@ -249,7 +247,7 @@ window.EC = {
   "consultation": "95 €",
   "enfant": "120 €",
   "majore": "120 €",
-  "reduction": 20,
+  "reduction": 10,
   "emdr": "100 €",
   "bilan": "350 €"
  },
