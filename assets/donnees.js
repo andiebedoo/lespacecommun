@@ -277,6 +277,7 @@ window.EC = {
   "iris": {
    "nom": "Iris Soamanitra",
    "lieux": [
+    "fontainebleau",
     "visio"
    ],
    "liens": {},
@@ -308,6 +309,7 @@ window.EC = {
    "paris14": "9 avenue René Coty, 75014 Paris",
    "paris15": "10 rue du Laos, 75015 Paris",
    "vitry": "100 avenue Rouget de Lisle, 94400 Vitry-sur-Seine",
+   "fontainebleau": "3 rue Paul Tavernier, 77300 Fontainebleau",
    "domicile": "À votre domicile (adresse convenue lors de la prise de rendez-vous)"
   },
   "lieux": {
@@ -317,6 +319,7 @@ window.EC = {
    "paris15": "Paris 15",
    "romainville": "Romainville",
    "vitry": "Vitry-sur-Seine",
+   "fontainebleau": "Fontainebleau",
    "idf": "Autre cabinet en Île-de-France",
    "domicile": "À domicile (Île-de-France)",
    "visio": "Téléconsultation"
