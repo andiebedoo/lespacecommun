@@ -268,6 +268,18 @@ window.EC = {
     "confiance-en-soi",
     "entreprise"
    ]
+  },
+  "iris": {
+   "nom": "Iris Fabiolla Soamanitra",
+   "lieux": [
+    "visio"
+   ],
+   "liens": {},
+   "slugs": [
+    "souffrance-au-travail",
+    "depression-anxiete",
+    "confiance-en-soi"
+   ]
   }
  },
  "tarifs": {
