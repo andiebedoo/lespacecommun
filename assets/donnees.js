@@ -56,6 +56,11 @@ window.EC = {
    "lien": "troubles/souffrance-au-travail.html",
    "type": "trouble"
   },
+  "consultation-urgence": {
+   "libelle": "Consultation d'urgence",
+   "lien": "troubles/consultation-urgence.html",
+   "type": "trouble"
+  },
   "traumatismes": {
    "libelle": "Traumatismes de vie",
    "lien": "troubles/traumatismes.html",
@@ -270,15 +275,18 @@ window.EC = {
    ]
   },
   "iris": {
-   "nom": "Iris Fabiolla Soamanitra",
+   "nom": "Iris Soamanitra",
    "lieux": [
     "visio"
    ],
    "liens": {},
    "slugs": [
+    "consultation-urgence",
     "souffrance-au-travail",
+    "traumatismes",
     "depression-anxiete",
-    "confiance-en-soi"
+    "confiance-en-soi",
+    "urgence"
    ]
   }
  },
