@@ -204,10 +204,12 @@ window.EC = {
    },
    "slugs": [
     "difficultes-scolaires",
+    "haut-potentiel-intellectuel",
     "confiance-en-soi",
     "travail-sur-soi",
     "souffrance-au-travail",
     "psychanalyse",
+    "wisc-v",
     "tests-de-personnalite",
     "orientation",
     "urgence",
