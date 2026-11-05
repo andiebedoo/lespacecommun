@@ -228,6 +228,7 @@ window.EC = {
     "depression-anxiete",
     "therapie-de-couple",
     "haut-potentiel-intellectuel",
+    "difficultes-scolaires",
     "psychanalyse",
     "wisc-v",
     "wais-v",
