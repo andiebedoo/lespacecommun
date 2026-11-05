@@ -21,6 +21,16 @@ window.EC = {
    "lien": "troubles/tdah.html",
    "type": "trouble"
   },
+  "haut-potentiel-intellectuel": {
+   "libelle": "Haut potentiel (HPI)",
+   "lien": "troubles/haut-potentiel-intellectuel.html",
+   "type": "trouble"
+  },
+  "difficultes-scolaires": {
+   "libelle": "Difficultés scolaires",
+   "lien": "troubles/difficultes-scolaires.html",
+   "type": "trouble"
+  },
   "confiance-en-soi": {
    "libelle": "Confiance en soi",
    "lien": "troubles/confiance-en-soi.html",
@@ -193,6 +203,7 @@ window.EC = {
     "120": "https://checkout.revolut.com/pay/4b23b6ac-7ac6-4453-864f-8101076405cd"
    },
    "slugs": [
+    "difficultes-scolaires",
     "confiance-en-soi",
     "travail-sur-soi",
     "souffrance-au-travail",
@@ -216,6 +227,7 @@ window.EC = {
     "maladies-chroniques",
     "depression-anxiete",
     "therapie-de-couple",
+    "haut-potentiel-intellectuel",
     "psychanalyse",
     "wisc-v",
     "wais-v",
@@ -253,9 +265,11 @@ window.EC = {
    "liens": {},
    "slugs": [
     "troubles-comportement",
+    "difficultes-scolaires",
     "tsa",
     "tdah",
     "confiance-en-soi",
+    "haut-potentiel-intellectuel",
     "integrative",
     "wisc-v"
    ]
