@@ -13,7 +13,7 @@ const TYPES = {
   adulte: { libelle: 'Consultation adulte / ado', duree: 45 },
   enfant: { libelle: 'Consultation enfant', duree: 40 },
   emdr: { libelle: 'Séance d\'EMDR', duree: 45 },
-  bilan: { libelle: 'Bilan psychologique complet', duree: 60 },
+  bilan: { libelle: 'Bilan psychométrique / projectif', duree: 60 },
   personnalite: { libelle: 'Tests de personnalité', duree: 60, bilan: true },
   competences: { libelle: 'Bilan de compétences', duree: 60, bilan: true },
 };

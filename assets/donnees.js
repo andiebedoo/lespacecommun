@@ -96,6 +96,12 @@ window.EC = {
    "lien": "troubles/troubles-comportement.html",
    "type": "trouble"
   },
+  "bilan-psychologique": {
+   "libelle": "Bilan psychologique",
+   "lien": "bilans/bilan-psychologique.html",
+   "type": "bilan",
+   "tarif": "Sur demande"
+  },
   "wisc-v": {
    "libelle": "Bilan WISC-V · enfant",
    "lien": "bilans/wisc-v.html",
@@ -209,7 +215,7 @@ window.EC = {
     "travail-sur-soi",
     "souffrance-au-travail",
     "psychanalyse",
-    "wisc-v",
+    "wais-v",
     "tests-de-personnalite",
     "orientation",
     "urgence",
