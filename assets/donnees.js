@@ -215,6 +215,7 @@ window.EC = {
     "travail-sur-soi",
     "souffrance-au-travail",
     "psychanalyse",
+    "bilan-psychologique",
     "wais-v",
     "tests-de-personnalite",
     "orientation",
@@ -238,6 +239,7 @@ window.EC = {
     "haut-potentiel-intellectuel",
     "difficultes-scolaires",
     "psychanalyse",
+    "bilan-psychologique",
     "wisc-v",
     "wais-v",
     "bilans-projectifs"
@@ -280,6 +282,7 @@ window.EC = {
     "confiance-en-soi",
     "haut-potentiel-intellectuel",
     "integrative",
+    "bilan-psychologique",
     "wisc-v"
    ]
   },
